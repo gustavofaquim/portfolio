@@ -1,0 +1,19 @@
+
+@use '../variables'
+
+@use '../mixins'
+
+.find-me
+    max-width: 1500px
+    width: 80%
+    margin-top: 160px
+    
+    h2
+        @include mixins.subtitulo
+    
+    p
+        color: variables.$text-color-secondary
+        margin-bottom: 1rem
+        line-height: 1.4rem
+        text-align: center
+      

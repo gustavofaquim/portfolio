@@ -1,0 +1,91 @@
+@use '../variables'
+@use '../mixins'
+    
+.projects-container
+    margin-bottom: 1rem
+    max-width: 1500px
+    width: 80%
+    margin: auto
+    margin-top: 10rem
+
+    .projects-container-title
+        width: 60%
+        margin: auto
+        text-align: center
+
+
+    .projects-grid
+        display: flex
+        flex-wrap: wrap
+
+        .project-card
+            border-radius: variables.$card-border-radius
+            background: variables.$bg-color-secondary
+            width: 26rem
+            height: auto
+            max-width: 500px
+            padding: 2rem
+            margin-bottom: 2rem
+            margin-left: 4rem
+            margin-top: 2rem
+            box-shadow: 10px 10px 40px -21px rgba(0, 0, 0, 0.75)
+            text-align: center
+
+          
+
+            svg
+                font-size: 2em
+                color: variables.$text-color
+            
+            img
+                max-width: 60%
+                max-height: 400px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: variables.$card-border-radius
+            
+            h3  
+                text-align: center
+                font-size: 1.5rem
+                color: variables.$text-color-secondary
+
+            p
+                margin-top: 3rem
+
+            a
+                display: inline-flex
+                bottom: 0
+                color: variables.$text-color
+                background: variables.$bg-color
+                font-size: 1em
+                padding: 0.5em 2em
+                justify-content: space-between
+                align-items: center
+                text-decoration: none
+                cursor: pointer
+
+                svg
+                    color: #0068d1 !important
+                    margin-right: 0.5em
+             
+
+        #prontuario
+
+            svg
+                color: #1d6edf !important
+              
+        
+        #todo
+            svg
+                color: #cd2424
+        
+        #diploma
+            svg
+                color: #8210bc
+
+        #orcamento
+            svg
+                color: #c4d80e
+                
+               

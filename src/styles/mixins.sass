@@ -1,0 +1,39 @@
+@use 'variables'
+
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+    
+
+
+@mixin btn
+    padding: 1rem 1.2rem
+    color: variables.$text-color
+    background: variables.$gradient
+    text-decoration: none
+    border-radius: 3rem
+
+@mixin gradient-border
+    content: ""
+    background: variables.$gradient
+    width: 3px
+    height: 30%
+
+
+@mixin  subtitulo
+    color: variables.$text-color
+    font-size: 2.2rem
+    margin-bottom: 1.3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 1rem
+
+    &:after
+        content: ""
+        background: variables.$gradient
+        width: 3px
+        height: 30%
+        

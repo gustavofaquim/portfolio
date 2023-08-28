@@ -1,0 +1,68 @@
+
+@use '../variables'
+
+@use '../mixins'
+
+
+.about-container
+
+    max-width: 1500px
+    width: 80%
+    margin-top: 70px
+    
+
+    h2
+        @include mixins.subtitulo
+    
+    p
+        color: variables.$text-color-secondary
+        margin-bottom: 1rem
+        line-height: 2rem
+        font-size: 1.3rem
+        text-align: justify
+
+    .about-me
+        background-color: variables.$bg-color-secondary
+        border-radius: variables.$card-border-radius
+        padding: 1.5rem
+        display: flex
+        margin-top: 5rem
+        justify-content: space-between
+        align-items: center
+        box-shadow: 10px 10px 40px -21px rgba(0,0,0,0.75)
+    
+    .container-img-avatar
+        max-width: 40%
+        max-height: 40%
+        min-width: 150px
+        min-height: 150px
+        width: 15%
+        height: 15%
+        border-radius: 50%
+        display: inline-block
+        padding: 3px
+        overflow: hidden
+        margin-left: 4rem
+
+    .avatar
+        border-radius: 50%
+        max-width: 100%
+        height: auto
+
+
+.title
+    margin-top: 30px
+    font-size: 2.8em !important
+    margin-bottom: 1rem !important
+
+.subtitle
+    color: variables.$text-color-secondary
+    border-radius: variables.$card-border-radius
+    padding: .8rem 1.2rem
+    font-size: 1.4em !important
+    margin-top: 5px
+    margin: auto
+    text-align: center !important
+            
+    
+    
