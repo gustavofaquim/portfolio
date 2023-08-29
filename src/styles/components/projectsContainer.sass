@@ -2,16 +2,26 @@
 @use '../mixins'
     
 .projects-container
-    margin-bottom: 1rem
-    max-width: 1500px
-    width: 80%
-    margin: auto
-    margin-top: 10rem
+    width: 100%
+    background: #11151A
+
+
+    .projects
+        width: 80%
+        margin: auto
+        margin-top: 10rem
+        margin-bottom: 10rem
 
     .projects-container-title
         width: 60%
         margin: auto
         text-align: center
+
+        p
+            margin-top: 3rem
+            color: variables.$text-color
+            margin-bottom: 1rem
+            font-size: 1.5rem
 
 
     .projects-grid
@@ -25,14 +35,13 @@
             height: auto
             max-width: 500px
             padding: 2rem
+            margin: auto
             margin-bottom: 2rem
-            margin-left: 4rem
             margin-top: 2rem
             box-shadow: 10px 10px 40px -21px rgba(0, 0, 0, 0.75)
             text-align: center
 
           
-
             svg
                 font-size: 2em
                 color: variables.$text-color
@@ -48,10 +57,15 @@
             h3  
                 text-align: center
                 font-size: 1.5rem
-                color: variables.$text-color-secondary
+                color: variables.$text-color
 
             p
                 margin-top: 3rem
+                color: variables.$text-color
+                margin-bottom: 1rem
+                line-height: 2rem
+                font-size: 1rem
+                text-align: justify
 
             a
                 display: inline-flex

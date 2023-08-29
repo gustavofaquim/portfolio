@@ -4,16 +4,20 @@
 @use '../mixins'
 
 .find-me
-    max-width: 1500px
-    width: 80%
-    margin-top: 160px
+    width: 100%
+    background: #18191ae8
+
+    .find-me-container
+        width: 80%
+        margin: auto
+        margin-top: 10rem
+        margin-bottom: 2rem
+
     
     h2
-        @include mixins.subtitulo
+        text-align: center
     
     p
-        color: variables.$text-color-secondary
-        margin-bottom: 1rem
-        line-height: 1.4rem
+        @include mixins.subtitulo
         text-align: center
       

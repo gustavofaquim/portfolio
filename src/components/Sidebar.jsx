@@ -7,7 +7,7 @@ import Devices from '../img/hero-devices.svg';
 
 import '../styles/components/sidebar.sass';
 import '../styles/components/aboutContainer.sass';
-import '../styles/components/findMe.sass';
+
 
 
 
@@ -19,7 +19,6 @@ const Sidebar = () =>{
             {/* C<img src={Devices} className='img-devices' alt="Devices" /> */}
             
             <AboutContainer />
-            <FindMe />
             {/*  <a href="" className="btn">Download Curriculo</a>*/}
         </aside>
     );

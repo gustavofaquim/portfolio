@@ -25,18 +25,20 @@ import {
   const TechnologiesContainer = () => {
     return (
       <section className="technologies-container">
-        <h2>Tecnologias</h2>
-        <p>Atualmente tenho focado meu trabalho e estudo nas seguintes tecnologias.</p>
-        <div className="technologies-grid">
-          {technologies.map((tech) => (
-            <div className="technology-card" id={tech.id} key={tech.id}>
-              {tech.icon}
-              <div className="technology-info">
-                <h3>{tech.name}</h3>
-              
-              </div>
+        <div className="technologies">
+          <h2>Tecnologias</h2>
+          <div className="technologies-grid-desc">
+            <div className="technologies-grid-desc-title">
+              <p>Minha jornada pela programação web teve início no PHP, linguagem que já possuo contato a alguns anos. Já desenvolvi pequenos projetos web utilizando Java e Django, junto aos bancos MySQL, PostgreSQL e SQL Server. Tenho me apaixonado pelo desenvolvimento com NodeJS por sua versatilidade e facilidade, que são potencializados pelo framework Express. Também tenho experiência com Laravel e MongoDB. </p>
             </div>
-          ))}
+            <div className="technologies-grid">
+              {technologies.map((tech) => (
+                <div className="technology-card" id={tech.id} key={tech.id}>
+                  {tech.icon}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     );

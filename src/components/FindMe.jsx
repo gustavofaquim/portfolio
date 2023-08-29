@@ -5,10 +5,12 @@ const FindMe = () => {
 
     return(
         <section className='find-me'>
-            <h2>Me Encontre</h2>
-            <p>Quer me dar uma oportunidade de demostrar o meu trabalho? Estes são os meus contatos.</p>
-            <InformationContainer />
-            <SocialNetworks />
+            <div className='find-me-container'>
+                <h2>Me Encontre</h2>
+                <p>Quer me dar uma oportunidade de demostrar o meu trabalho? Estes são os meus contatos.</p>
+                <InformationContainer />
+                <SocialNetworks />
+            </div>
         </section>
     )
 }

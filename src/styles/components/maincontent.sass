@@ -2,13 +2,9 @@
 @use '../mixins'
 
 #main-content
-    background-color: variables.$bg-color
     flex: 2 1 0 // duas veze maior que o sidebar...
-    padding: 3rem
-
     section
         display: flex
-        flex-direction: column
 
     h2
         color: variables.$text-color
@@ -21,11 +17,7 @@
         &:after
            @include mixins.gradient-border
     
-    p
-        color: variables.$text-color-secondary
-        margin-bottom: 1rem
-        line-height: 1.4rem
-        text-align: center
+
     
 
     .btn

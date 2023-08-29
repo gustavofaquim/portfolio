@@ -2,31 +2,57 @@
 @use '../mixins'
     
 .technologies-container
-    margin-bottom: 1rem
-    max-width: 1500px
-    width: 80%
+    width: 100%
     margin: auto
+    background: #18191ae8
+
+    .technologies
+        width: 80%
+        margin: auto
+        margin-top: 10rem
+        margin-bottom: 10rem
+
+    .technologies-grid-desc
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 5rem
+
+
+    .technologies-grid-desc-title
+        width: 80%
+    
+    p
+        color: variables.$text-color
+        margin-bottom: 1rem
+        line-height: 2rem
+        font-size: 1.3rem
+        text-align: left
 
     .technologies-grid
         display: flex
         flex-wrap: wrap
-        gap: 1.5rem
+        gap: 1rem
+        width: 10rem
+        width: 100%
+        margin-left: 5rem
 
 
     .technology-card
         @include mixins.center
         gap: 1rem
+        width: 20%
         padding: 1rem
         border: 1px solid #333
         margin: auto
         border-radius: variables.$card-border-radius 
 
+
         h3
             color: variables.$text-color
-            margin-bottom: 1rem
 
         svg
-            font-size: 6rem
+            font-size: 5rem
 
     #html
         svg

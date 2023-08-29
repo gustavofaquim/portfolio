@@ -23,26 +23,30 @@ const projects = [
 const ProjectsContainer = () =>{
     return(
         <section className='projects-container'>
-           <div className="projects-container-title">
-                <h2>Meus Projetos</h2>
-                <p> Alguns dos projetos desenvolvidos recentemente. </p>
-           </div>
+           <div className="projects">
 
-            <div className="projects-grid">
-            {projects.map((project) => (
-                <div className="project-card" id={project.id} key={project.id} >
-                    
-                    {project.img}
-                    <h3>{project.name}</h3>
-               
-                    <p>{project.desc}</p>
-
-                    <a href={project.link} className="exter" target="_blank"> 
-                        <FiExternalLink /> Conheça 
-                    </a>
-                </div>
-            ))}
+            <div className="projects-container-title">
+                    <h2>Meus Projetos</h2>
+                    <p> Alguns dos projetos desenvolvidos recentemente. </p>
             </div>
+
+                <div className="projects-grid">
+                {projects.map((project) => (
+                    <div className="project-card" id={project.id} key={project.id} >
+                        
+                        {project.img}
+                        <h3>{project.name}</h3>
+                
+                        <p>{project.desc}</p>
+
+                        <a href={project.link} className="exter" target="_blank"> 
+                            <FiExternalLink /> Conheça 
+                        </a>
+                    </div>
+                ))}
+                </div>
+
+           </div>
 
         </section>
     );
