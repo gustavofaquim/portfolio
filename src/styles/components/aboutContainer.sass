@@ -6,16 +6,17 @@
 
 .about-container
     width: 100%
-    background: #11151A
+    background: variables.$bg-color
     
     .about
         max-width: 1500px
-        width: 80%
+        width: 90%
         margin: auto
         margin-top: 13rem
         margin-bottom: 20rem
         display: flex
-        flex-wrap: wrap
+        align-items: center
+        
        
     
 
@@ -26,38 +27,32 @@
             color: variables.$text-color
             margin-bottom: 1rem
             line-height: 2rem
-            font-size: 1.3rem
             text-align: justify
+            font-size: 1.2rem
 
     .about-me
-        background-color: variables.$bg-color-secondary
-        border-radius: variables.$card-border-radius
         padding: 1.5rem
-        display: flex
         width: 90%
         margin: auto
-        margin-top: 5rem
         justify-content: space-between
         align-items: center
-        box-shadow: 10px 10px 40px -21px rgba(0,0,0,0.75)
     
     .container-img-avatar
-        max-width: 40%
+        max-width: 280px
         max-height: 40%
         min-width: 150px
         min-height: 150px
-        width: 15%
+        width: 25%
         height: 15%
-        border-radius: 50%
         display: inline-block
         padding: 3px
         overflow: hidden
-        margin-left: 4rem
 
     .avatar
         border-radius: 50%
         max-width: 100%
         height: auto
+        border: 3px inset variables.$highlighted-text-color
 
 
 .title
@@ -66,19 +61,24 @@
     margin-bottom: 1rem !important
 
 .subtitle
-    color: variables.$text-color
-    border-radius: variables.$card-border-radius
-    padding: .8rem 1.2rem
+    color: variables.$highlighted-text-color !important
     font-size: 1.4em !important
-    margin-top: 5px
-    margin: auto
+    margin-top: 30px
     width: 100%
-    text-align: center !important
+
             
 
 @media (max-width: 933px)
-    .about-me
+    .about
         display: block !important
+        margin-top: 4rem !important
+
+    #information
+        padding: 0 !important
+
+        .info-card
+            width: 100% 
+
 
     .project-card
         width: auto

@@ -34,8 +34,9 @@ const ProjectsContainer = () =>{
                 {projects.map((project) => (
                     <div className="project-card" id={project.id} key={project.id} >
                         
-                        {project.img}
-                        <h3>{project.name}</h3>
+                        <div className="title-card">
+                            {project.img} <p>{project.name}</p>
+                        </div>
                 
                         <p>{project.desc}</p>
 

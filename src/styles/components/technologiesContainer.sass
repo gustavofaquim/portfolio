@@ -4,13 +4,15 @@
 .technologies-container
     width: 100%
     margin: auto
-    background: #18191ae8
+    background: variables.$bg-color-secondary
+
 
     .technologies
         width: 80%
         margin: auto
         margin-top: 10rem
         margin-bottom: 10rem
+        color: variables.$text-color-secondary
 
     .technologies-grid-desc
         display: flex
@@ -23,10 +25,10 @@
         width: 80%
     
     p
-        color: variables.$text-color
+        color: variables.$text-color-secondary
         margin-bottom: 1rem
         line-height: 2rem
-        font-size: 1.3rem
+        font-size: 1.1rem
         text-align: left
 
     .technologies-grid
@@ -43,7 +45,7 @@
         gap: 1rem
         width: 20%
         padding: 1rem
-        border: 1px solid #333
+        box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px
         margin: auto
         border-radius: variables.$card-border-radius 
 
