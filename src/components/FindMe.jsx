@@ -41,7 +41,7 @@ const FindMe = () => {
                     <div className='info-card'>
                         <AiFillEnvironment id='pin-icon' />
                         <h3>Localização</h3>
-                        <p>Ceres/GO</p>
+                        <p>Anápolis/GO</p>
                      
                     </div>
 

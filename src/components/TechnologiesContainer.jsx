@@ -27,9 +27,13 @@ import {
       <section className="technologies-container">
         <div className="technologies">
           <h2>Tecnologias</h2>
+          <p></p>
           <div className="technologies-grid-desc">
             <div className="technologies-grid-desc-title">
-              <p>Minha jornada pela programação web teve início no PHP, linguagem que já possuo contato a alguns anos. Já desenvolvi pequenos projetos web utilizando Java e Django, junto aos bancos MySQL, PostgreSQL e SQL Server. Tenho me apaixonado pelo desenvolvimento com NodeJS por sua versatilidade e facilidade, que são potencializados pelo framework Express. Também tenho experiência com Laravel e MongoDB. </p>
+              <p>Minha jornada pela programação web iniciou-se no PHP, linguagem que já possuo contato há alguns anos. 
+                Já desenvolvi pequenos projetos web utilizando Java e Django, junto aos bancos MySQL, PostgreSQL e 
+                SQL Server. Tenho me apaixonado pelo desenvolvimento com NodeJS por sua versatilidade e facilidade, 
+                potencializados pelo framework Express. Também tenho experiência com Laravel e MongoDB.</p>
             </div>
             <div className="technologies-grid">
               {technologies.map((tech) => (
