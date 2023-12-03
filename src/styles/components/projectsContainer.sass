@@ -26,39 +26,66 @@
         display: flex
         flex-wrap: wrap
 
+        a
+            text-decoration: none
+            cursor: pointer !important
+            margin: auto
+
         .project-card
             border-radius: variables.$card-border-radius
-            width: 26rem
+            width: 20rem
             height: auto
+            min-height: 350px
             max-width: 500px
-            padding: 2rem
-            margin: auto
+            padding: 1rem
             margin-bottom: 2rem
             margin-top: 2rem
-            background-color: variables.$modal-color
+            background: variables.$modal-color
             box-shadow: rgba(0, 0, 0, 1) 0px 6px 20px -6px
             text-align: center
 
-            .title-card
-                display: flex
-                align-items: center
-
-                p
-                    font-weight: bold
-                    margin-top: 0
+            &:hover
+                background-color: red !important
                 
+
+
+            .type-card
+                p
+                    font-size: 10pt
+                    text-align: left
+                    color: variables.$highlighted-text-color
+                    text-transform: uppercase
+
+            .title-card
+                align-items: center
+                text-align: left
+                p
+                    margin-top: 0
+
+                p:hover
+                    color: variables.$highlighted-text-color
+                    
+            .project-icon
+                svg
+                    font-size: 2.5em
           
             svg
-                font-size: 2em
                 color: variables.$text-color
             
             img
-                max-width: 60%
+                max-width: 90%
                 max-height: 400px
-                display: flex
                 justify-content: center
                 align-items: center
-                border-radius: variables.$card-border-radius
+                -moz-transition: all 0.5s
+                -webkit-transition: all 0.5s
+                transition: all 0.5s
+            
+            img:hover
+                -moz-transform: scale(1.2)
+                -webkit-transform: scale(1.2)
+                transform: scale(1.2)
+                    
             
             h3  
                 text-align: center
@@ -66,26 +93,12 @@
                 color: variables.$text-color
 
             p
-                color: variables.$text-color
+                color: variables.$text-color-cards
                 line-height: 2rem
-                font-size: 1rem
-                text-align: justify
+                font-size: 1.5rem
                 margin-left: 10px
                 margin-top: 20px
                 
-
-            a
-                display: inline-flex
-                bottom: 0
-                color: variables.$text-color
-                background: variables.$bg-color
-                font-size: 0.8em
-                padding: 0.5em 2em
-                justify-content: space-between
-                align-items: center
-                text-decoration: none
-                cursor: pointer
-                margin-top: 20px
 
                 svg
                     color: #0068d1 !important
@@ -94,14 +107,34 @@
             a:hover
                 background: variables.$bg-color-hover
 
-               
+
+
+        .project-icon
+            #prontuario
+                overflow: hidden
+                background-color: #FFFFFF
+                border-radius: variables.$card-border-radius   
+
+            #todo
+                overflow: hidden
+                background-color:#0D0D0E
+                border-radius: variables.$card-border-radius   
+            
+            #orcamento
+                overflow: hidden
+                border-radius: variables.$card-border-radius  
+
+            #diploma
+                overflow: hidden
+                background-color: #FFFFFF
+                border-radius: variables.$card-border-radius  
              
 
         #prontuario
-
             svg
                 color: #1d6edf !important
-              
+        
+       
         
         #todo
             svg

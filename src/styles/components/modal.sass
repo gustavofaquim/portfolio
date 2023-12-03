@@ -2,6 +2,59 @@
 @use '../mixins'
 
 
+.modal-dialog
+    max-width: 80%
+
+
 .modal-content
-    background-color: variables.$modal-color
+    background: variables.$modal-color
     color: variables.$text-color
+    box-shadow: variables.$modal-shadow
+
+    .modal-header
+        border: 0px solid
+
+        button
+            background-color: variables.$highlighted-text-color !important
+            border-radius: 30px
+            color: #FFFFFF !important
+            opacity: 1 !important
+            font-size: 10pt
+            padding: 0.5em
+
+    
+
+.modal-backdrop
+    background-color: variables.$modal-fundo
+    opacity: 1 !important
+
+.container
+    .row
+       .col-lg-6
+            overflow: hidden
+            padding: 0
+
+    .texto
+        padding: 1em
+        color: variables.$text-color-cards
+
+        p
+            font-size: 15pt
+            margin-top: 50px
+            line-height: 1.8
+            color: variables.$text-calor-card-secondary
+        
+        h2
+            font-weight: bold
+
+            
+     
+
+    img
+        width: 100%
+        border-radius: variables.$card-border-radius
+
+
+button
+    background-color: variables.$modal-color  !important
+    margin-left: 20px

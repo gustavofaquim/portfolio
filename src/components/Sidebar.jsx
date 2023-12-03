@@ -2,9 +2,6 @@ import AboutContainer from './AboutContainer';
 import FindMe from './FindMe';
 
 
-import Devices from '../img/hero-devices.svg';
-
-
 import '../styles/components/sidebar.sass';
 import '../styles/components/aboutContainer.sass';
 
