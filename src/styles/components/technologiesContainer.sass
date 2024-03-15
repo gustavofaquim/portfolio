@@ -2,24 +2,49 @@
 @use '../mixins'
     
 .technologies-container
+    display: flex
+    flex-wrap: wrap
     width: 100%
     margin: auto
     background: variables.$bg-color-secondary
 
+    h4
+        font-weight: 600
+
+    .titulo
+        margin: auto
+        margin-top: 100px    
+        display: inline
+        width: 70%
+        text-align: center
+        color: variables.$highlighted-text-color
+
+        hr
+            border: 2px solid variables.$text-color-secondary
+            width: 150px
+            margin: auto
+       
+        h3
+            font-size: 2rem
+            font-weight: 700
+
+        p
+            text-align: center
+
+    .sobre
+        display: inline
+        margin: auto
+        margin-top: 150px
+        width: 40rem
+        color: variables.$text-color-secondary
+       
 
     .technologies
-        width: 80%
+        width: 30rem
         margin: auto
-        margin-top: 10rem
+        margin-top: 150px
         margin-bottom: 10rem
         color: variables.$text-color-secondary
-
-    .technologies-grid-desc
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-top: 5rem
-
 
     .technologies-grid-desc-title
         width: 80%
@@ -35,19 +60,17 @@
         display: flex
         flex-wrap: wrap
         gap: 1rem
-        width: 10rem
-        width: 100%
-        margin-left: 5rem
+       
 
 
     .technology-card
         @include mixins.center
-        gap: 1rem
-        width: 20%
-        padding: 1rem
-        box-shadow: rgba(11, 43, 158, 0.15) 0px 6px 20px -6px
-        margin: auto
-        border-radius: variables.$card-border-radius 
+        padding: 1rem 1rem
+        font-size: 0.9rem
+        background: rgba(153,153,153,0.2)
+        border-radius: 5px
+        font-weight: 600
+        color: #666
 
 
         h3

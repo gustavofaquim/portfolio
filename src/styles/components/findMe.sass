@@ -4,15 +4,61 @@
 @use '../mixins'
 
 .find-me
-    width: 100%
-    background: variables.$bg-color-secondary
+    display: flex
+    flex-wrap: wrap
+    margin: auto
 
     .find-me-container
-        width: 80%
         margin: auto
-        margin-top: 10rem
-        margin-bottom: 2rem
-        color:  variables.$text-color-secondary
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        margin-top: 50px
+        color: variables.$text-color-cards
+
+        .contato
+            margin: auto
+            width: 40rem
+
+        .social
+            margin: auto
+            width: 20rem
+
+        #social-networks
+            width: 100%
+        
+        
+        #information
+            display: inline-flex
+            width: 100%
+           
+            
+            .info-card
+                margin: auto
+                font-size: 1rem
+                text-align: center
+                padding: 5px
+
+                h3
+                    font-size: 1.1rem 
+
+        .title  
+            color: variables.$highlighted-text-color
+            margin: auto
+            text-align: center
+        
+            h3
+                font-size: 1.4rem
+                font-weight: 500
+
+            p
+                color: variables.$text-color-secondary
+                margin-bottom: 1rem
+                line-height: 2rem
+                font-size: 1.1rem
+                text-align: center
+                font-weight: 400
+
 
     
 

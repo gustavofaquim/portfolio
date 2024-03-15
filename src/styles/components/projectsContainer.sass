@@ -2,53 +2,56 @@
 @use '../mixins'
     
 .projects-container
+    display: flex
+    flex-wrap: wrap
     width: 100%
-    background: variables.$bg-color
+    margin: auto
+    background: #fafafa
 
 
     .projects
-        width: 80%
+        width: 100%
         margin: auto
-        margin-top: 10rem
+        margin-top: 100px
         margin-bottom: 10rem
 
     .projects-container-title
         color: variables.$highlighted-text-color
+        margin: auto  
+        display: inline
+        width: 70%
+        text-align: center
 
-        p
-            margin-top: 1rem
-            margin-bottom: 1rem
-            font-size: 1.5rem
-            color: variables.$text-color
+        hr
+            border: 2px solid variables.$text-color-secondary
+            width: 150px
+            margin: auto
+       
+        h3
+            font-size: 2rem
+            font-weight: 700
+
 
 
     .projects-grid
         display: flex
         flex-wrap: wrap
-
-        a
-            text-decoration: none
-            cursor: pointer !important
-            margin: auto
-
+        margin: auto
+        margin-top: 100px
+       
         .project-card
             border-radius: variables.$card-border-radius
-            width: 20rem
+            display: inline-flex
+            margin: auto
             height: auto
-            min-height: 350px
-            max-width: 500px
+            max-width: 1000px
             padding: 1rem
             margin-bottom: 2rem
-            margin-top: 2rem
-            background: variables.$modal-color
-            box-shadow: rgba(0, 0, 0, 1) 0px 6px 20px -6px
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+            margin-top: 2rem           
             text-align: center
 
-            &:hover
-                background-color: red !important
-                
-
-
+            
             .type-card
                 p
                     font-size: 10pt
@@ -56,16 +59,19 @@
                     color: variables.$highlighted-text-color
                     text-transform: uppercase
 
-            .title-card
+            .text-card
+                width: 60%
                 align-items: center
                 text-align: left
-                p
-                    margin-top: 0
 
-                p:hover
-                    color: variables.$highlighted-text-color
-                    
+            .desc-card
+                font-size: 0.9em
+                text-align: left
+                font-weight: 500
+              
+                
             .project-icon
+                width: 50%
                 svg
                     font-size: 2.5em
           
@@ -73,19 +79,10 @@
                 color: variables.$text-color
             
             img
-                max-width: 90%
-                max-height: 400px
+                max-width: 100%
                 justify-content: center
                 align-items: center
-                -moz-transition: all 0.5s
-                -webkit-transition: all 0.5s
-                transition: all 0.5s
-            
-            img:hover
-                -moz-transform: scale(1.2)
-                -webkit-transform: scale(1.2)
-                transform: scale(1.2)
-                    
+               
             
             h3  
                 text-align: center
@@ -93,11 +90,11 @@
                 color: variables.$text-color
 
             p
-                color: variables.$text-color-cards
                 line-height: 2rem
                 font-size: 1.5rem
-                margin-left: 10px
+                margin-left: 40px
                 margin-top: 20px
+                font-weight: 600
                 
 
                 svg

@@ -20,25 +20,36 @@ import {
     { id: "react", name: "React", icon: <DiReact /> },
     { id: "php", name: "PHP", icon: <DiPhp />},
     {id: "sql", name: "SQL Server", icon: <DiMsqlServer />},
+    {id:"srss", name: "SQL Server Reporting Services"},
+    {id:"mongo", name: "MongoDB"}
   ];
   
   const TechnologiesContainer = () => {
     return (
       <section className="technologies-container">
+
+      <div className="titulo">
+        <h3>SOBRE MIM</h3>
+        <hr />
+        <p>Aqui você encontrará mais informações sobre mim, o que faço e minhas habilidades atuais.</p>
+      </div>
+        
+        <div className="sobre">
+          <h4>Me Conheça!</h4>
+          <p>Desenvolvedor apaixonado por inovação, graduado em Sistemas de Informação pelo Instituto Federal de Educação Ciência e Tecnologia Goiano - Campus Ceres e e Pós-Graduado em Desenvolvimento Web Full Stack pela Faculdade Descomplica. Possuo experiência em projetos 
+            nas áreas de desenvolvimento e analise de dados.</p>
+        </div>
+        
         <div className="technologies">
-          <h2>Tecnologias</h2>
+          <h4>Minhas Habilidades</h4>
           <p></p>
           <div className="technologies-grid-desc">
             <div className="technologies-grid-desc-title">
-              <p>Minha jornada pela programação web iniciou-se no PHP, linguagem que já possuo contato há alguns anos. 
-                Já desenvolvi pequenos projetos web utilizando Java e Django, junto aos bancos MySQL, PostgreSQL e 
-                SQL Server. Tenho me apaixonado pelo desenvolvimento com NodeJS por sua versatilidade e facilidade, 
-                potencializados pelo framework Express. Também tenho experiência com Laravel e MongoDB.</p>
             </div>
             <div className="technologies-grid">
               {technologies.map((tech) => (
                 <div className="technology-card" id={tech.id} key={tech.id}>
-                  {tech.icon}
+                  {tech.name}
                 </div>
               ))}
             </div>
