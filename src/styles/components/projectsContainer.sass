@@ -44,12 +44,24 @@
             display: inline-flex
             margin: auto
             height: auto
-            max-width: 1000px
+            width: 70%
+            max-width: 900px
             padding: 1rem
             margin-bottom: 2rem
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
             margin-top: 2rem           
             text-align: center
+            align-items: center 
+            justify-content: center 
+
+            @media (max-width: 950px)
+                display: inline
+                width: 70%
+
+            @media (max-width: 440px)
+                display: inline
+                width: 85%
+                    
 
             
             .type-card
@@ -64,6 +76,9 @@
                 align-items: center
                 text-align: left
 
+                @media (max-width: 950px)
+                    width: 100%
+
             .desc-card
                 font-size: 0.9em
                 text-align: left
@@ -72,6 +87,12 @@
                 
             .project-icon
                 width: 50%
+                @media (max-width: 950px)
+                    width: 75%
+                    margin: auto
+                @media (max-width: 500px)
+                    width: 100%
+                    
                 svg
                     font-size: 2.5em
           
