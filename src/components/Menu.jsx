@@ -7,6 +7,7 @@ const Menu = () => {
         <div className="menu-left">Gustavo Faquim</div>
         <ul className="menu-right">
             <li>Sobre Mim</li>
+            <li>Habilidades</li>
             <li>Projetos</li>
         </ul>
       </div>

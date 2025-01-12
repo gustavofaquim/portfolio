@@ -19,6 +19,10 @@
         text-align: center
         color: variables.$highlighted-text-color
 
+        span
+            font-weight: 800
+
+
         hr
             border: 2px solid variables.$text-color-secondary
             width: 150px
@@ -26,7 +30,7 @@
        
         h3
             font-size: 2rem
-            font-weight: 700
+            
 
         p
             text-align: center
@@ -43,76 +47,82 @@
        
 
     .technologies
-        width: 40%
+        width: 60%
         margin: auto
-        margin-top: 150px
+        margin-top: 50px
         margin-bottom: 10rem
+        max-width: 1200px
+        min-width: 300px
         color: variables.$text-color-secondary
 
         @media (max-width: 950px)
             width: 80%
 
-    .technologies-grid-desc-title
-        width: 80%
     
-    p
-        color: variables.$text-color-secondary
-        margin-bottom: 1rem
-        line-height: 2rem
-        font-size: 1.1rem
-        text-align: left
 
     .technologies-grid
         display: flex
-        flex-wrap: wrap
         gap: 1rem
-       
+        flex-wrap: wrap
+        
+
+        .technology-card
+            @include mixins.center
+            padding: 1rem 1rem
+            font-size: 0.9rem
+            background: rgba(153,153,153,0.2)
+            border-radius: 5px
+            font-weight: 600
+            color: #666
+            display: inline-block
+            text-align: center
+            width: 15%
+            max-width: 400px
+            min-width: 150px
 
 
-    .technology-card
-        @include mixins.center
-        padding: 1rem 1rem
-        font-size: 0.9rem
-        background: rgba(153,153,153,0.2)
-        border-radius: 5px
-        font-weight: 600
-        color: #666
+            h3
+                color: variables.$text-color
 
+            svg
+                font-size: 5rem
 
-        h3
-            color: variables.$text-color
+            .card-icone
+                border: 1px solide red
+                width: 100%
+                padding: 20px
 
-        svg
-            font-size: 5rem
+                img
+                    width: 100%
 
-    #html
-        svg
-            color: #E44D26
+        #html
+            svg
+                color: #E44D26
 
-    #css
-        svg
-            color: #1572B6
+        #css
+            svg
+                color: #1572B6
 
-    #js
-        svg
-            color: #F0DB4F
+        #js
+            svg
+                color: #F0DB4F
 
-    #node
-        svg
-            color: #83CD29
+        #node
+            svg
+                color: #83CD29
 
-    #mysql
-        svg
-            color: #00618A
+        #mysql
+            svg
+                color: #00618A
 
-    #react
-        svg
-            color: #61DAFB
-    
-    #php
-        svg
-            color: #4F5B93
-    
-    #sql
-        svg
-            color: #EE2D26
+        #react
+            svg
+                color: #61DAFB
+        
+        #php
+            svg
+                color: #4F5B93
+        
+        #sql
+            svg
+                color: #EE2D26
