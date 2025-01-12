@@ -1,7 +1,5 @@
 import AboutContainer from './AboutContainer';
 import FindMe from './FindMe';
-
-
 import '../styles/components/sidebar.sass';
 import '../styles/components/aboutContainer.sass';
 

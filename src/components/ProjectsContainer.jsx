@@ -39,8 +39,7 @@ const ProjectsContainer = () =>{
            <div className="projects">
 
             <div className="projects-container-title">
-                <h3>PROJETOS</h3>
-                <hr />
+                <h3>PROJETOS RECENTES</h3>
             </div>
 
                 <div className="projects-grid">
