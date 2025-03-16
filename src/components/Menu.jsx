@@ -4,10 +4,10 @@ const Menu = () => {
   return (
     <nav className="menu">
       <div className="menu-icon">
-        <div className="menu-left">Gustavo Faquim</div>
+        <div className="menu-left">{`<Gustavo Faquim/>`}</div>
         <ul className="menu-right">
             <li>Sobre Mim</li>
-            <li>Habilidades</li>
+            <li> <a href="#habilidades"></a>Habilidades</li>
             <li>Projetos</li>
         </ul>
       </div>

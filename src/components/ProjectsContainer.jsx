@@ -14,16 +14,13 @@ import ToDoList from "../img/to_do_list2.png"
 import Prontuario from "../img/integracao-prontuario.jpeg"
 import Diploma from "../img/integracao-diploma.jpeg"
 import SisParla from "../img/sisparla.png";
-
-
 import IntegracaoDiploma from '../img/integracao-diploma.jpeg';
 
 
 const projects = [
-    { id: "sisparla",type: 'Desenvolvimento', name: "SisParla", icon: <AiOutlineApi />, img: SisParla, link:'https://github.com/gustavofaquim/sisparla-frontend' ,  desc: 'O SisParla é um software de código aberto desenvolvido para oferecer apoio completo às atividades parlamentares. Projetado para simplificar e otimizar os processos cruciais dentro do ambiente legislativo, o SisParla oferece uma série de recursos poderosos para parlamentares e suas equipes.'},
-    { id: "prontuario",type: 'Integração', name: "Integração de Prontuário de Documentos", icon: <AiOutlineApi />, img: Prontuario, link:'https://github.com/gustavofaquim/integracao-prontuario' ,  desc: 'Integração entre o GED Ábaris e prontuário de documentos do sistema acadêmico Lyceum. Consumindo a API de ambos os sistema foi possível integrar os documentos do GED no sistema acadêmico'},
-    { id: "todo", type: 'Desenvolvimento', name: "Gerenciador de Tarefas", icon: <BsListCheck />, img: ToDoList, link:'https://github.com/gustavofaquim/to-do-list',  desc: "Sistema simples de lista de tarefas desenvolvido com NodeJS como parte dos estudos da tecnlogia."},
-    { id: "diploma", type: 'Integração', name: "Diploma Digital", icon: <PiCertificateLight />, img: Diploma , link:'https://github.com/gustavofaquim/integracao_diploma_digital',  desc: "Solução API para o carregamento automatizado de documentação necessária para emissão do diploma digital no sistema acadêmico Lyceum."},
+    { id: "mandatotec", technologies: [{name:'React', class: 'react'}, {name:'NodeJS', class: 'node'}, {name:'MySql', class: 'mysql'}], name: "mandatotec", img: SisParla, link:'https://github.com/gustavofaquim/sisparla-frontend' ,  desc: 'O MandatoTec é um software para gestão de mandatos políticos, ajudando parlamentares e suas equipes a organizar agendas, demandas e informações com eficiência e simplicidade, promovendo transparência e profissionalismo no dia a dia.'},
+    { id: "prontuario",technologies: [{name:'React', class: 'react'}, {name:'NodeJS', class: 'node'}], name: "Integração Lyceum", icon: <AiOutlineApi />, img: Prontuario, link:'https://github.com/gustavofaquim/integracao-prontuario' ,  desc: 'Integração entre o GED Ábaris e prontuário de documentos do sistema acadêmico Lyceum. Consumindo a API de ambos os sistema foi possível integrar os documentos do GED no sistema acadêmico'},
+    { id: "diploma", technologies: [{name:'HTML', class: 'html'}, {name:'PHP', class: 'php'}], name: "Diploma Digital", icon: <PiCertificateLight />, img: Diploma , link:'https://github.com/gustavofaquim/integracao_diploma_digital',  desc: "Solução API para o carregamento automatizado de documentação necessária para emissão do diploma digital no sistema acadêmico Lyceum."},
 ];
 
 
@@ -39,21 +36,29 @@ const ProjectsContainer = () =>{
            <div className="projects">
 
             <div className="projects-container-title">
-                <h3>PROJETOS RECENTES</h3>
+                <h3>PROJETOS <span>RECENTES</span></h3>
             </div>
 
                 <div className="projects-grid">
                 {projects.map((project) => (
 
                     <div className="project-card" id={project.id} key={project.id} >
-                        
-                        <div className="project-icon">
-                            <img src={project.img} alt="" />
-                        </div>
-
+                
                         <div className="text-card">
                             <p className="title-card">{project.name}</p>
                             <p className="desc-card">{project.desc}</p>
+                        </div>
+
+                        <div className="technologies">
+                            {
+                                project?.technologies.map((tec) => (
+                                    <span className={`${tec.class} tag-technologies`}> {tec.name} </span>
+                                ))
+                            }
+                        </div>
+
+                        <div className="project-icon">
+                            <img src={project.img} alt="" />
                         </div>
 
                 
@@ -61,7 +66,6 @@ const ProjectsContainer = () =>{
                     
                 ))}
                 </div>
-
            </div>
 
          

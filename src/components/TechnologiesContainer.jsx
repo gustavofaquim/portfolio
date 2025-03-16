@@ -1,19 +1,8 @@
-import {
-    DiHtml5,
-    DiCss3,
-    DiJsBadge,
-    DiNodejsSmall,
-    DiMysql,
-    DiReact,
-    DiPhp,
-    DiMsqlServer,
-    DiBootstrap
-  } from "react-icons/di";
-  
+
 import Html from "../img/icones/html.png";
 import Css from "../img/icones/css.svg"
 import Js from "../img/icones/js.png";
-import Node from "../img/icones/nodejs.svg"
+import Node from "../img/icones/node.svg"
 import React from "../img/icones/react.svg"
 import Bootstrap from "../img/icones/boostrap.svg"
 import Typescript from "../img/icones/typescript.png"
@@ -21,9 +10,15 @@ import Python from "../img/icones/python.png"
 import Mysql from "../img/icones/mysql.svg";
 import PostgreSQL from "../img/icones/postgresql.svg";
 import Git from "../img/icones/git.svg";
+import Php from "../img/icones/php.png";
+import Sql from "../img/icones/sql.png";
+import Mongo from "../img/icones/mongo.png";
+import Srss from "../img/icones/report.png";
+import Figma from "../img/icones/figma.png";
+import Vite from "../img/icones/vite.png";
+import Bi from "../img/icones/bi.png";
 
-
-  import "../styles/components/technologiesContainer.sass";
+import "../styles/components/technologiesContainer.sass";
   
   const technologies = [
     { id: "html", name: "HTML5", icon: Html },
@@ -36,19 +31,20 @@ import Git from "../img/icones/git.svg";
     { id: "python", name: "Python", icon: Python },
     { id: "mysql", name: "MySQL", icon: Mysql},
     { id: "postgreSQL", name: "PostgreSQL", icon: PostgreSQL },
-    { id: "php", name: "PHP", icon: <DiPhp />},
-    { id: "sql", name: "SQL Server", icon: <DiMsqlServer />},
-    { id:"mongo", name: "MongoDB"},
-    { id:"srss", name: "SQL Server Reporting Services"},
+    { id: "php", name: "PHP", icon: Php},
+    { id: "sql", name: "SQL Server", icon: Sql},
+    { id:"mongo", name: "MongoDB", icon: Mongo},
+    { id:"srss", name: "SQL Server Reporting Services", icon: Srss},
+    { id: 'bi', name: 'Power Bi', icon: Bi},
     { id: "git", name: "Git", icon: Git },
-    { id: "figma", name: "Figma", icon: <DiReact /> },
-    { id: "vite", name: "Vite", icon: <DiReact /> },
+    { id: "figma", name: "Figma", icon: Figma },
+    { id: "vite", name: "Vite", icon: Vite },
     
   ];
   
   const TechnologiesContainer = () => {
     return (
-      <section className="technologies-container">
+      <section id='habilidades' className="technologies-container">
 
       <div className="titulo">
         <h3>MINHAS <span>HABILIDADES</span></h3>
