@@ -1,20 +1,21 @@
 
+import ParticlesBackground from '../components/ParticlesBackground.jsx';
 
 const AboutContainer = () =>{
     return(
        <section className='about-container'>
-        <div className='about'>
+       <ParticlesBackground />
 
+        <div className='about'>
+        
             <div className='about-me'>
-               
-                <div className="container-titulo">
-                    <h1 className="title">Olá<br/>Sou <span className="destaque">Gustavo Faquim</span></h1>
-                    <p className="subtitle">desenvolvedor web</p>
-                   
-                </div>
 
                 <div className="container-img">
                     <img src="/src/img/eu.jpeg" alt="Foto de Perfil" />
+                </div>
+               
+                <div className="container-titulo">
+                    <h1 className="title">Olá<br/>Eu sou <span className="destaque">Gustavo Faquim</span></h1>
                 </div>
 
                 <div>

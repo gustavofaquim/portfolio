@@ -17,28 +17,33 @@ import Srss from "../img/icones/report.png";
 import Figma from "../img/icones/figma.png";
 import Vite from "../img/icones/vite.png";
 import Bi from "../img/icones/bi.png";
+import Sqlite from "../img/icones/sqlite.png";
+import ReactNative from "../img/icones/reactnative.png";
+import Oracle from "../img/icones/oracle.png";  
 
 import "../styles/components/technologiesContainer.sass";
   
   const technologies = [
-    { id: "html", name: "HTML5", icon: Html },
     { id: "css", name: "CSS3", icon: Css },
     { id: "js", name: "JavaScript", icon: Js },
     { id: "node", name: "Node.js", icon: Node },
     { id: "react", name: "React", icon: React },
-    { id: "bootstrap", name: "Bootstrap", icon: Bootstrap },
+    { id: "reactnative", name: "React Native", icon: ReactNative},
     { id: "typescript", name: "Typescript", icon: Typescript },
     { id: "python", name: "Python", icon: Python },
+    { id: "php", name: "PHP", icon: Php},
+    { id: "bootstrap", name: "Bootstrap", icon: Bootstrap },
     { id: "mysql", name: "MySQL", icon: Mysql},
     { id: "postgreSQL", name: "PostgreSQL", icon: PostgreSQL },
-    { id: "php", name: "PHP", icon: Php},
     { id: "sql", name: "SQL Server", icon: Sql},
-    { id:"mongo", name: "MongoDB", icon: Mongo},
-    { id:"srss", name: "SQL Server Reporting Services", icon: Srss},
+    { id: "oracle", name: "Oracle", icon: Oracle},
+    { id: "sqlite", name: "SQLite", icon: Sqlite},
+    { id: "mongo", name: "MongoDB", icon: Mongo},
+    { id: "srss", name: "SQL Server Reporting Services", icon: Srss},
     { id: 'bi', name: 'Power Bi', icon: Bi},
     { id: "git", name: "Git", icon: Git },
     { id: "figma", name: "Figma", icon: Figma },
-    { id: "vite", name: "Vite", icon: Vite },
+    { id: "vite", name: "Vite", icon: Vite }, 
     
   ];
   
@@ -47,7 +52,8 @@ import "../styles/components/technologiesContainer.sass";
       <section id='habilidades' className="technologies-container">
 
       <div className="titulo">
-        <h3>MINHAS <span>HABILIDADES</span></h3>
+        <h3>Tecnologias que domino</h3>
+        <p>Algumas tecnologias e ferramentas</p>
         
       </div>
         

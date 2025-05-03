@@ -8,6 +8,9 @@
     margin: auto
     background: #fafafa
 
+    p
+        font-size: 1.3em
+
 
     .projects
         width: 70%
@@ -15,8 +18,8 @@
         margin-top: 100px
         margin-bottom: 10rem
 
-        @media (max-width: 950px)
-            width: 80%
+        @media (max-width: 1291px)
+            width: 90%
 
     .projects-container-title
         color: variables.$highlighted-text-color
@@ -49,19 +52,21 @@
         margin-top: 100px
        
         .project-card
-            border-radius: variables.$card-border-radius
+            border-radius: 10px
             display: block
             width: 30%
             margin: auto
             height: auto
             max-width: 900px
-            padding: 1rem
+            padding: 0.6rem
             margin-bottom: 2rem
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
             margin-top: 2rem           
             text-align: center
             align-items: center 
             justify-content: center 
+            cursor: pointer
+
 
             @media (max-width: 950px)
                 display: inline
@@ -70,30 +75,61 @@
             @media (max-width: 440px)
                 display: inline
                 width: 85%
-                    
-           
-            .title-card
-                text-align: left
-                font-size: 1.2em
-                height: 40px
-                color: #0C1225
-                font-weight: 650
 
-            .desc-card
-                font-size: 0.8em
-                text-align: left
-                height: 120px
+
+            .card-info
+                display: flex
+                text-align: center
+                align-items: center
+
+                .card-icone-navegacao
+                    color: #757575
+                    opacity: 0
+                    transform: translateX(-5px)
+                    transition: opacity 0.3s ease, transform 0.3s ease
+                   
+
+            &:hover
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)
+                .card-icone-navegacao
+                    opacity: 1
+                    transform: translateX(0)
+                    
+
+
+            .text-card 
+                margin-top: 20px   
+                margin-left: 15px
+                margin-bottom: 10px 
+                width: 90%  
+           
+                .title-card
+                    text-align: left
+                    font-size: 1.1em
+                    color: #0C1225
+                    font-weight: 350
+
+                .title-type
+                    font-size: 0.9em
+                    text-align: left
+                    color: #757575
+
+
+                .desc-card
+                    font-size: 0.8em
+                    text-align: left
+                    height: 120px
+            
               
                 
             .project-icon
                 width: 100%
-                height: 200px
+                height: 220px
                 border-radius: 8px
-                margin-top: 20px
+                background-color: #ECECEC
 
                 img
-                    width: 100%
-                    height: 100%
+                    width: 80%
                     object-fit: cover
                     border-radius: 8px
 
@@ -141,6 +177,8 @@
             
             a:hover
                 background: variables.$bg-color-hover
+        
+       
 
 
 

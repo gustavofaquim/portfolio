@@ -7,6 +7,7 @@
     width: 100%
     margin: auto
     background: variables.$bg-color-secondary
+   
 
     h4
         font-weight: 600
@@ -48,13 +49,14 @@
        
 
     .technologies
-        width: 60%
+        width: 90%
         margin: auto
         margin-top: 50px
         margin-bottom: 10rem
         max-width: 1200px
         min-width: 300px
         color: variables.$text-color-secondary
+        user-select: none
 
         @media (max-width: 950px)
             width: 80%
@@ -65,28 +67,29 @@
         display: flex
         gap: 1rem
         flex-wrap: wrap
+        justify-content: center
         
 
         .technology-card
             @include mixins.center
             padding: 1rem 1rem
-            font-size: 0.9rem
-            background: rgba(153,153,153,0.2)
+            font-size: 0.8rem
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
             border-radius: 5px
             font-weight: 600
             color: #666
             display: inline-block
             text-align: center
-            width: 15%
+            width: 10%
             max-width: 400px
             min-width: 150px
+
+            &:hover
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)
 
 
             h3
                 color: variables.$text-color
-
-            svg
-                font-size: 5rem
 
             .card-icone
                 border: 1px solide red
@@ -94,36 +97,4 @@
                 padding: 20px
 
                 img
-                    width: 100%
-
-        #html
-            svg
-                color: #E44D26
-
-        #css
-            svg
-                color: #1572B6
-
-        #js
-            svg
-                color: #F0DB4F
-
-        #node
-            svg
-                color: #83CD29
-
-        #mysql
-            svg
-                color: #00618A
-
-        #react
-            svg
-                color: #61DAFB
-        
-        #php
-            svg
-                color: #4F5B93
-        
-        #sql
-            svg
-                color: #EE2D26
+                    width: 80%

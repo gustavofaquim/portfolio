@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import "../styles/components/menu.sass";
 
 const Menu = () => {
@@ -6,9 +7,13 @@ const Menu = () => {
       <div className="menu-icon">
         <div className="menu-left">{`<Gustavo Faquim/>`}</div>
         <ul className="menu-right">
-            <li>Sobre Mim</li>
-            <li> <a href="#habilidades"></a>Habilidades</li>
-            <li>Projetos</li>
+          <li>Sobre Mim</li>
+          <li>
+            <Link to="/#habilidades">Habilidades</Link>
+          </li>
+          <li>
+            <Link to="/#project">Projetos</Link>
+          </li>
         </ul>
       </div>
     </nav>
