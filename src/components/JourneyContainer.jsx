@@ -7,7 +7,7 @@ import "../styles/components/journeyContainer.sass";
 
 const JourneyContainer = () => {
   return (
-    <section className='journey'>
+    <section id='jornada' className='journey'>
 
       <div className="titulo">
           <h3>Minha jornada até aqui</h3>

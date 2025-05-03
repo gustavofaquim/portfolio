@@ -29,7 +29,7 @@ const ProjectsContainer = () =>{
     const [img, setImg] = React.useState("");
 
     return(
-        <section className='projects-container'>
+        <section id='projetos' className='projects-container'>
            <div className="projects">
 
             <div className="projects-container-title">

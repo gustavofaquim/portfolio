@@ -49,7 +49,7 @@ import "../styles/components/technologiesContainer.sass";
   
   const TechnologiesContainer = () => {
     return (
-      <section id='habilidades' className="technologies-container">
+      <section id='tecnologias' className="technologies-container">
 
       <div className="titulo">
         <h3>Tecnologias que domino</h3>

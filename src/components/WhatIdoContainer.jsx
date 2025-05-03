@@ -9,7 +9,7 @@ import '../styles/components/WhatIdoContainer.sass';
 const WhatIdoContainer = () => {
 
     return(
-        <section className="what-container">
+        <section id='habilidades' className="what-container">
 
         <div className="titulo">
             <h3>O que eu faço?</h3>

@@ -3,7 +3,7 @@ import ParticlesBackground from '../components/ParticlesBackground.jsx';
 
 const AboutContainer = () =>{
     return(
-       <section className='about-container'>
+       <section id='sobre' className='about-container'>
        <ParticlesBackground />
 
         <div className='about'>
