@@ -1,5 +1,6 @@
 
 import ParticlesBackground from '../components/ParticlesBackground.jsx';
+import MinhaFoto from "../img/eu.jpeg"
 
 const AboutContainer = () =>{
     return(
@@ -11,7 +12,7 @@ const AboutContainer = () =>{
             <div className='about-me'>
 
                 <div className="container-img">
-                    <img src="/src/img/eu.jpeg" alt="Foto de Perfil" />
+                    <img src={MinhaFoto} alt="Foto de Perfil" />
                 </div>
                
                 <div className="container-titulo">
