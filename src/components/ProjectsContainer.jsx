@@ -7,17 +7,15 @@ import { SlArrowRight } from "react-icons/sl";
 
 import '../styles/components/projectsContainer.sass';
 
-import ToDoList from "../img/to_do_list2.png"
-import Prontuario from "../img/integracao-prontuario.jpeg"
-import Diploma from "../img/integracao-diploma.jpeg"
-import Mandatotec from "../img/projetos/mandatotec.png";
-
+import Prontuario from "../img/projetos/integracaocapa.png"
+import Mandatotec from "../img/projetos/capamandatotec.png";
+import AppDespesas from "../img/projetos/appdespesascapa.png";
 
 
 const projects = [
-    { id: "mandatotec", technologies: [{name:'React', class: 'react'}, {name:'NodeJS', class: 'node'}, {name:'MySql', class: 'mysql'}], name: "Mandatotec", type: 'Sistema', img: Mandatotec, link:'https://github.com/gustavofaquim/sisparla-frontend' ,  desc: 'O MandatoTec é um software para gestão de mandatos políticos, ajudando parlamentares e suas equipes a organizar agendas, demandas e informações com eficiência e simplicidade, promovendo transparência e profissionalismo no dia a dia.'},
-    { id: "prontuario",technologies: [{name:'React', class: 'react'}, {name:'NodeJS', class: 'node'}], name: "Integração Lyceum", icon: <AiOutlineApi />, type: 'Integração', img: Prontuario, link:'https://github.com/gustavofaquim/integracao-prontuario' ,  desc: 'Integração entre o GED Ábaris e prontuário de documentos do sistema acadêmico Lyceum. Consumindo a API de ambos os sistema foi possível integrar os documentos do GED no sistema acadêmico'},
-    { id: "diploma", technologies: [{name:'HTML', class: 'html'}, {name:'PHP', class: 'php'}], name: "Diploma Digital", icon: <PiCertificateLight />, type: 'Integração', img: Diploma , link:'https://github.com/gustavofaquim/integracao_diploma_digital',  desc: "Solução API para o carregamento automatizado de documentação necessária para emissão do diploma digital no sistema acadêmico Lyceum."},
+    { id: "mandatotec",  name: "Mandatotec", type: 'Sistema', img: Mandatotec},
+    { id: "appdespesa", name: "App Mobile Despesas",  type: 'App Mobile', img: AppDespesas},
+    { id: "prontuario", name: "Integração Lyceum",  type: 'Integração', img: Prontuario },
 ];
 
 

@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
-import { Mandatotec, AppDespesa } from './ProjectComponents';
+import { Mandatotec, AppDespesa, IntegracaoAbarysLyceum } from './ProjectComponents';
 
 import '../styles/components/projectComponents.sass'
 
 const componentsMap = {
   mandatotec: Mandatotec,
   appdespesa: AppDespesa,
+  prontuario: IntegracaoAbarysLyceum
 };
 
 const ProjectDetail = () => {

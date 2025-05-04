@@ -35,7 +35,7 @@ const JourneyContainer = () => {
         </div>
 
         <div className="trabalho">
-          <h3 className="titulo-area"><BsPersonWorkspace className="icone" /> Experiências Profissionais</h3>
+          <h3 className="titulo-area" id='titulo-experiencias'><BsPersonWorkspace className="icone" /> Experiências Profissionais</h3>
 
           <div className="emprego">
               <p className="titulo">Supervisor Técnico</p> <br />
