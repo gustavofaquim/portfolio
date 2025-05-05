@@ -10,12 +10,15 @@ import '../styles/components/projectsContainer.sass';
 import Prontuario from "../img/projetos/integracaocapa.png"
 import Mandatotec from "../img/projetos/capamandatotec.png";
 import AppDespesas from "../img/projetos/appdespesascapa.png";
+import GestorFinanceiro from "../img/projetos/gestor_financeiro_add.png"
 
 
 const projects = [
     { id: "mandatotec",  name: "Mandatotec", type: 'Sistema', img: Mandatotec},
-    { id: "appdespesa", name: "App Mobile Despesas",  type: 'App Mobile', img: AppDespesas},
+    { id: "appdespesa", name: "App Despesas",  type: 'App Mobile', img: AppDespesas},
+    { id: "gestorfinanceiro", name: "Gestor Financeiro",  type: 'Sistema', img: GestorFinanceiro },
     { id: "prontuario", name: "Integração Lyceum",  type: 'Integração', img: Prontuario },
+    
 ];
 
 

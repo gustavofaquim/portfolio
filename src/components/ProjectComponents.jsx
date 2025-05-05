@@ -8,6 +8,8 @@ import TelaSaldo from "../img/projetos/details/appdespesassaldo.png"
 import TelaDetalhesApp from "../img/projetos/details/appdespesatela.png";
 import TopoImagemIntegracao from "../img/projetos/integracaocapa.png"
 import DiagramaFluxoIntegracao from "../img/projetos/details/fluxoIntegracao.png"
+import ImagemTopoFinanceiro from "../img/projetos/details/gestor_financeiro_add.png"
+import ImagemSistemaFinanceiro from "../img/projetos/details/gestor_financeiro_recebidos.png"
 
 const Mandatotec = () => {
 
@@ -270,6 +272,92 @@ const IntegracaoAbarysLyceum = () => {
   );
 };
 
+
+
+const ControleFinanceiroProjetos = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="container-details">
+      <div className="details">
+        
+        <div className="linha">
+          <div className="topo">
+            <div className="topo-textos">
+              <h1>Sistema de Controle Financeiro por Projeto</h1>
+              <hr />
+              <p>
+                Um sistema completo para gerenciar a emissão de notas fiscais e o acompanhamento dos pagamentos recebidos dentro de uma empresa. A proposta é dar mais autonomia aos gerentes de projeto e, ao mesmo tempo, oferecer à diretoria uma visão precisa e consolidada da saúde financeira de cada iniciativa.
+              </p>
+            </div>
+
+            <div className="topo-imagem">
+              <img src={ImagemTopoFinanceiro} alt="Painel do sistema de controle financeiro" />
+            </div>
+          </div>
+        </div>
+
+        <div className="corpo">
+
+          <div className="imagem">
+            <img src={ImagemSistemaFinanceiro} alt="Tela de controle de notas fiscais por projeto" />
+          </div>
+
+          <div className="area-texto">
+
+            <div className="texto">
+              <p className="titulo">O desafio</p>
+              <p>
+                Em muitas empresas, a gestão financeira dos projetos é feita de forma descentralizada e pouco integrada, dificultando o acompanhamento dos valores a receber, emissão de notas fiscais e análise do fluxo de caixa por projeto. O principal desafio era garantir visibilidade, controle e padronização em um processo que envolvia diferentes áreas da empresa.
+              </p>
+            </div>
+
+            <div className="texto" id="desenvolvimento">
+              <p className="titulo">Solução técnica</p>
+
+              <p>
+                Para resolver esse problema, foi desenvolvido um sistema web intuitivo que permite aos gerentes registrar as demandas de faturamento de forma prática, visualizar o status de cada nota e controlar os recebimentos. Os dados são consolidados em tempo real em um painel gerencial construído no Power BI.
+              </p>
+
+              <ul className="lista">
+                <li>Interface desenvolvida com React.js (frontend leve e responsivo)</li>
+                <li>Back-end robusto com Node.js e banco de dados PostgreSQL</li>
+                <li>Painel de BI com Power BI conectado diretamente ao banco</li>
+                <li>Controle por níveis de acesso: gerentes vs. diretoria</li>
+                <li>Relatórios por projeto, cliente, valor e status de recebimento</li>
+              </ul>
+            </div>
+
+            <div className="texto" id="resultados">
+              <p className="titulo">Resultados alcançados</p>
+              <ul className="lista">
+                <li>Organização das demandas de faturamento por projeto</li>
+                <li>Redução de falhas e retrabalho na emissão de notas</li>
+                <li>Facilidade no acompanhamento de pagamentos pendentes</li>
+                <li>Melhoria na comunicação entre gerentes e setor financeiro</li>
+                <li>Visibilidade clara para a diretoria sobre a saúde financeira por projeto</li>
+              </ul>
+            </div>
+
+            <div className="texto" id="aprendizados">
+              <p className="titulo">Lições aprendidas</p>
+              <p>
+                Este projeto reforçou a importância de criar sistemas que conectam dados operacionais com visões estratégicas. A integração entre o sistema de gestão e o painel em Power BI trouxe ganhos reais de produtividade e tomada de decisão. Também foi uma excelente oportunidade para aprofundar práticas de modelagem de dados, usabilidade e integração entre tecnologias.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+
   
-export { Mandatotec, AppDespesa, IntegracaoAbarysLyceum };
+export { Mandatotec, AppDespesa, IntegracaoAbarysLyceum, ControleFinanceiroProjetos };
   
