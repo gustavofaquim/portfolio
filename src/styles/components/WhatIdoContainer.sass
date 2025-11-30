@@ -4,49 +4,70 @@
 .what-container
     display: flex
     flex-wrap: wrap
-    width: 100%
     margin: auto
     background: #fafafa
 
 
+    .container-titulo
+        background: #1362CA
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        margin: auto
+        height: 500px
+    
+
 .titulo
     font-weight: 100
     margin: auto
-    margin-top: 100px    
+    margin-top: 90px    
     display: inline
     width: 70%
     text-align: center
-    color: variables.$highlighted-text-color
+    color: #FFFFFF
+    //color: variables.$highlighted-text-color
 
     h3
         font-size: 2.2rem
     p
-        font-size: 1.2rem
+        font-size: 1.4rem
+        margin-top: 20px
+        font-weight: 300
+        color: #d7d6d6
 
 .area-coisas
+    //background-color: #FFFFFF
+    padding: 20px
+    border-radius: 10px
     width: 80%
     margin: auto
-    margin-top: 50px
+    margin-top: -220px
     margin-bottom: 150px
     display: flex
     align-content: center
     align-items: center
     flex-wrap: wrap
     justify-content: space-between
+    //box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8
 
     .coisas
         width: 30%
         margin: auto
-        margin-top: 15px
+        margin-top: 30px
+        margin-bottom: 10px
         max-width: 600px
         min-width: 300px
-        padding: 20px
+        padding: 40px
+        min-height: 350px
+        height: auto
         border-radius: 10px
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        border: 1px solid #E6ECF8
+        //box-shadow: #E6ECF8 0px 2px 8px 0px
         user-select: none
+        background-color: #fafafa 
 
         &:hover
-            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)
+            box-shadow: #E6ECF8 0px 2px 8px 0px
             
         .icone
             display: inline-flex

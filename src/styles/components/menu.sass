@@ -1,47 +1,188 @@
-
 .menu
   position: fixed
   display: flex
+  max-width: 100% !important
   top: 0
   left: 0
   width: 100%
   padding: 25px 50px
-  background-color: #0C1225
+  background-color: #212529
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
   z-index: 1000
   color: #FFFFFF
 
   .menu-icon
     display: flex
-    justify-content: space-between
     align-items: center
     width: 90%
     margin: auto
-    min-width: 300px
-    flex-wrap: wrap
-    align-content: center
 
-
-  
   .menu-left
     font-weight: bold
-    font-size: 1.2em
-    min-width: 200px
+    margin-right: auto
 
   .menu-right
     display: flex
-    gap: 20px
+    flex: 1
+    justify-content: center
+    gap: 40px
     list-style: none
     margin: 0
     padding: 0
-    font-size: 1.1em
 
   ul
     display: flex
     flex-wrap: wrap
+
   li
     cursor: pointer
-    
+    font-size: 14pt
+    &:hover
+      color: #097FD9
+
     a
       text-decoration: none
       color: #FFFFFF
+
+  /* HAMBURGER BUTTON (hidden em desktop) */
+  .hamburger
+    display: none
+    background: none
+    border: 0
+    padding: 6px
+    margin-left: 12px
+    cursor: pointer
+    outline: none
+
+    .hamburger-box
+      width: 30px
+      height: 18px
+      display: inline-block
+      position: relative
+
+      .hamburger-inner
+        position: absolute
+        top: 50%
+        left: 0
+        right: 0
+        height: 2px
+        transform: translateY(-50%)
+        background-color: #fff
+        transition: transform 0.3s ease, background-color 0.3s ease
+
+        &::before,
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          height: 2px
+          background-color: #fff
+          transition: transform 0.3s ease, opacity 0.2s ease
+        &::before
+          top: -8px
+        &::after
+          bottom: -8px
+
+    /* estado ativo (X) */
+    &.is-active
+      .hamburger-inner
+        transform: rotate(45deg)
+      .hamburger-inner::before
+        transform: rotate(90deg) translateX(0)
+        top: 0
+      .hamburger-inner::after
+        opacity: 0
+
+  /* MOBILE MENU (overlay) */
+  .menu-mobile
+    display: none
+    position: fixed
+    top: 80px 
+    min-height: 100vh
+    height: 100vh 
+    left: 0
+    right: 0
+    background-color: #212529
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.35s ease, opacity 0.35s ease
+    opacity: 0
+    z-index: 999
+
+    ul
+      display: flex
+      flex-direction: column
+      gap: 18px
+      list-style: none
+      padding: 20px
+      margin: 0
+
+      li
+        font-size: 16pt
+        padding: 8px 0
+
+    &.open
+      display: block
+      max-height: 70vh
+      opacity: 1
+
+  .menu-overlay
+    display: none
+    position: fixed
+    inset: 0
+    background: rgba(0, 0, 0, 0.45)
+    z-index: 998
+
+  /* Remove scroll do body quando o menu aberto */
+  :global(.no-scroll)
+    overflow: hidden
+
+/* RESPONSIVE */
+@media (max-width: 576px)
+  .menu
+    padding: 18px 16px
+
+    .menu-icon
+      flex-direction: row !important
+      align-items: center
+
+    .menu-right
+      display: none
+
+    .menu-left
+      margin-left: 10px
+
+    .hamburger
+      display: inline-block
+
+    .menu-mobile
+      display: block
+
+
+/* outros breakpoints que você já tinha */
+@media (max-width: 1140px)
+  .menu-right
+    li
+      font-size: 10pt
+
+@media (max-width: 836px)
+  .menu
+    padding: 30px 5px 30px 5px
+
+    .menu-icon
+      flex-direction: column
+      width: 100%
+      /* retirei bordas de debug */
+      .menu-right
+        gap: 30px
+        width: 100%
+
+  .menu-left
+    margin: auto
+
+  .menu-right
+    margin-top: 20px
+    li
+      font-size: 13pt
+      margin-top: 4px

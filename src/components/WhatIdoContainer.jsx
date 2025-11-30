@@ -11,9 +11,11 @@ const WhatIdoContainer = () => {
     return(
         <section id='habilidades' className="what-container">
 
-        <div className="titulo">
-            <h3>O que eu faço?</h3>
-            <p>Meus trabalhos</p>
+        <div className="container-titulo">
+            <div className="titulo">
+                <h3>O que eu posso fazer pelo seu projeto</h3>
+                <p>Soluções completas em tecnologia para acelerar resultados.</p>
+            </div>
         </div>
 
 

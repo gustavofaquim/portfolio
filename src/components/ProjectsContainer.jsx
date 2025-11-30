@@ -14,6 +14,7 @@ import GestorFinanceiro from "../img/projetos/gestor_financeiro_add.png"
 
 
 const projects = [
+    { id: "conecta",  name: "Conecta Anápolis", type: 'App Mobile', img: Mandatotec},
     { id: "mandatotec",  name: "Mandatotec", type: 'Sistema', img: Mandatotec},
     { id: "appdespesa", name: "App Despesas",  type: 'App Mobile', img: AppDespesas},
     { id: "gestorfinanceiro", name: "Gestor Financeiro",  type: 'Sistema', img: GestorFinanceiro },
@@ -34,8 +35,8 @@ const ProjectsContainer = () =>{
            <div className="projects">
 
             <div className="projects-container-title">
-                <h3>Projetos Recentes</h3>
-                <p>Alguns dos meus trabalhos</p>
+                <h3>Projetos em Destaque</h3>
+                <p>Alguns dos principais projetos que desenvolvi ou participei.</p>
             </div>
 
                 <div className="projects-grid">

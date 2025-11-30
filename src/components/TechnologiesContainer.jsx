@@ -52,8 +52,8 @@ import "../styles/components/technologiesContainer.sass";
       <section id='tecnologias' className="technologies-container">
 
       <div className="titulo">
-        <h3>Tecnologias que domino</h3>
-        <p>Algumas tecnologias e ferramentas</p>
+        <h3>Stack de Desenvolvimento</h3>
+        <p>O que uso para dar vida às minhas ideias</p>
         
       </div>
         
