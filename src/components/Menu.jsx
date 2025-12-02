@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import "../styles/components/menu.sass";
 
@@ -6,6 +6,7 @@ const Menu = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const menuMobileRef = useRef(null);
 
   const scrollToSection = (id) => {
     const element = document.querySelector(id);
@@ -15,19 +16,18 @@ const Menu = () => {
   };
 
   const handleClick = (id) => {
-    // fecha o menu móvel caso esteja aberto
     setOpen(false);
 
     if (location.pathname !== '/') {
-      // Se não estiver na home, navega e envia o id via state
       navigate('/', { state: { scrollTo: id } });
     } else {
-      // Se já estiver na home, só rola até a seção
-      scrollToSection(id);
+      // espera um tick para garantir que transição/fechamento visual ocorra
+      // (não necessário, mas evita problemas caso você tenha animação que sobreponha)
+      setTimeout(() => scrollToSection(id), 50);
     }
   };
 
-  // Fecha o menu ao mudar de rota por qualquer motivo
+  // Fecha o menu ao mudar de rota
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
@@ -42,7 +42,7 @@ const Menu = () => {
     return () => document.body.classList.remove('no-scroll');
   }, [open]);
 
-  // opcional: fechar com ESC
+  // fechar com ESC
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') setOpen(false);
@@ -50,6 +50,27 @@ const Menu = () => {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, []);
+
+  // Torna o menu realmente não interativo quando fechado:
+  useEffect(() => {
+    const node = menuMobileRef.current;
+    if (!node) return;
+
+    // se o navegador suportar inert, use (remove interatividade/foco)
+    if ('inert' in HTMLElement.prototype) {
+      node.inert = !open;
+    } else {
+      // fallback: pointer-events / visibility / aria-hidden / tabIndex
+      node.style.pointerEvents = open ? 'auto' : 'none';
+      node.style.visibility = open ? 'visible' : 'hidden';
+      node.setAttribute('aria-hidden', String(!open));
+      // remover foco/tabulação dos itens quando fechado
+      const items = node.querySelectorAll('li');
+      items.forEach((li) => {
+        li.tabIndex = open ? 0 : -1;
+      });
+    }
+  }, [open]);
 
   const menuItems = [
     { id: '#sobre', label: 'Sobre mim' },
@@ -64,7 +85,6 @@ const Menu = () => {
       <div className="menu-icon">
         <div className="menu-left">{`<Gustavo Faquim/>`}</div>
 
-        {/* botão hamburger - aparece em telas pequenas via CSS */}
         <button
           className={`hamburger ${open ? 'is-active' : ''}`}
           onClick={() => setOpen(!open)}
@@ -90,9 +110,9 @@ const Menu = () => {
         </ul>
       </div>
 
-      {/* Menu móvel: overlay / slide down — visível apenas em resoluções < 576px */}
       <div
         id="menu-mobile"
+        ref={menuMobileRef}
         className={`menu-mobile ${open ? 'open' : ''}`}
         role="dialog"
         aria-hidden={!open}
@@ -102,6 +122,8 @@ const Menu = () => {
             <li
               key={item.id}
               onClick={() => handleClick(item.id)}
+              // garante que não sejam focáveis quando fechado
+              tabIndex={open ? 0 : -1}
             >
               {item.label}
             </li>
@@ -109,8 +131,13 @@ const Menu = () => {
         </ul>
       </div>
 
-      {/* overlay semântica para fechar clicando fora (aparece quando open) */}
-      {open && <div className="menu-overlay" onClick={() => setOpen(false)} aria-hidden="true" />}
+      {open && (
+        <div
+          className="menu-overlay"
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+        />
+      )}
     </nav>
   );
 };

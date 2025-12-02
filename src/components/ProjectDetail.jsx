@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Mandatotec,ConectaAnapolis,  AppDespesa, IntegracaoAbarysLyceum, ControleFinanceiroProjetos } from './ProjectComponents';
+import { Mandatotec, ConectaAnapolis,  AppDespesa, IntegracaoAbarysLyceum, ControleFinanceiroProjetos } from './ProjectComponents';
 
 import '../styles/components/projectComponents.sass'
 

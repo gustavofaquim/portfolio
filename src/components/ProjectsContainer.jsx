@@ -11,10 +11,11 @@ import Prontuario from "../img/projetos/integracaocapa.png"
 import Mandatotec from "../img/projetos/capamandatotec.png";
 import AppDespesas from "../img/projetos/appdespesascapa.png";
 import GestorFinanceiro from "../img/projetos/gestor_financeiro_add.png"
+import ConectaAnapolis from "../img/projetos/conecta_anapolis.png"
 
 
 const projects = [
-    { id: "conecta",  name: "Conecta Anápolis", type: 'App Mobile', img: Mandatotec},
+    { id: "conecta",  name: "Conecta Anápolis", type: 'App Mobile', img: ConectaAnapolis},
     { id: "mandatotec",  name: "Mandatotec", type: 'Sistema', img: Mandatotec},
     { id: "appdespesa", name: "App Despesas",  type: 'App Mobile', img: AppDespesas},
     { id: "gestorfinanceiro", name: "Gestor Financeiro",  type: 'Sistema', img: GestorFinanceiro },
