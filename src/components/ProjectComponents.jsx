@@ -59,7 +59,7 @@ const ProjectDetails = ({ project }) => {
               <div className="texto" id={sec.id} key={idx}>
                 <p className="titulo">{sec.title}</p>
                 {typeof sec.content === 'string' ? (
-                  <div dangerouslySetInnerHTML={{ __html: sec.content }} />
+                  <div className='descricao' dangerouslySetInnerHTML={{ __html: sec.content }} />
                 ) : (
                   sec.content
                 )}
