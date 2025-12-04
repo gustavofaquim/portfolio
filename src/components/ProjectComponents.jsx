@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-// Agrupe as imagens em um objeto e importe apenas o que for necessário
+// imagens
 import Mandatotectop from "../img/projetos/details/mandatotectopp.png";
 import FormMantatotec from "../img/projetos/details/formmandatotec.png";
 import TopoImagemDespesas from "../img/projetos/details/appdespesahome.png";
@@ -17,10 +17,9 @@ import ConectaAreas from "../img/projetos/details/conecta_areas.jpeg";
 import ConectaProtocolos from "../img/projetos/details/conecta_protocolos.jpeg";
 
 /*
-  Componente genérico ProjectDetails
-  - recebe um objeto `project` com: title, intro, topoImage, gallery (array), sections (array de {id?, title, content})
-  - centraliza o scrollToTop
-  - mantém as classes CSS do seu design atual para minimizar mudanças no CSS
+  ProjectDetails atualizado:
+  - Não renderiza mais uma gallery global.
+  - Renderiza imagens que estão dentro de cada seção (sec.image ou sec.images).
 */
 const ProjectDetails = ({ project }) => {
   useEffect(() => {
@@ -32,13 +31,15 @@ const ProjectDetails = ({ project }) => {
       <div className="details">
         <div className="linha">
           <div className="topo">
+            
             <div className="topo-textos">
+              <span className={project.tagId}>{project.tag}</span>
               <h1>{project.title}</h1>
               <p>{project.intro}</p>
             </div>
 
             {project.imagemCapa && (
-              <div className="imagem-geral" id={project.topoImageId || ''}>
+              <div className="imagem-capa" id={project.topoImageId || ''}>
                 <img src={project.imagemCapa} alt={`Topo ${project.title}`} />
               </div>
             )}
@@ -46,23 +47,30 @@ const ProjectDetails = ({ project }) => {
         </div>
 
         <div className="corpo">
-          {project.gallery && project.gallery.length > 0 && (
-            <div className="imagem" id={project.galleryId || ''}>
-              {project.gallery.map((src, i) => (
-                <img key={i} src={src} alt={`${project.title} - ${i}`} />
-              ))}
-            </div>
-          )}
+          {/* removida a gallery global */}
 
           <div className="area-texto">
             {project.sections.map((sec, idx) => (
               <div className="texto" id={sec.id} key={idx}>
                 <p className="titulo">{sec.title}</p>
+
                 {typeof sec.content === 'string' ? (
                   <div className='descricao' dangerouslySetInnerHTML={{ __html: sec.content }} />
                 ) : (
                   sec.content
                 )}
+
+                {/* Renderiza imagens da seção se houver */}
+                {(sec.image || (sec.images && sec.images.length > 0)) && (
+                  <div className="section-images">
+                    {sec.image && <img src={sec.image} alt={`${project.title} - ${sec.title}`} />}
+                    {sec.images && sec.images.map((src, i) => (
+                      <img key={i} src={src} alt={`${project.title} - ${sec.title} - ${i}`} />
+                    ))}
+                  </div>
+                )}
+
+                
               </div>
             ))}
           </div>
@@ -73,16 +81,18 @@ const ProjectDetails = ({ project }) => {
 };
 
 /*
-  Dados dos projetos — aqui centralizamos todo o conteúdo. Assim fica fácil de manter,
-  reduzir duplicidade e internacionalizar/alterar textos sem mexer na estrutura do JSX.
+  Dados dos projetos — agora com imagens dentro das sections.
+  Observe como removi os campos `gallery` e usei `image` / `images` nas sections.
 */
 const projects = {
   mandatotec: {
     title: 'Mandatotec',
     intro:
       'O mandatotec é uma plataforma inovadora desenvolvida para modernizar e otimizar a gestão de mandatos políticos. Ele busca oferecer ferramentas que facilitem a comunicação e a eficiência no dia a dia dos gabinetes parlamentares.',
+    tag: 'Web',
+    tagId: 'web',
     imagemCapa: Mandatotectop,
-    gallery: [FormMantatotec],
+    topoImageId: 'mandatotec-imagem-topo',
     sections: [
       {
         title: 'O desafio',
@@ -92,42 +102,36 @@ const projects = {
 
           O Mandatotec nasceu para ser a plataforma completa de gestão de relacionamento com apoiadores, com foco em tecnologia, dados e inteligência estratégica.
           Criamos um sistema que permite centralizar informações, segmentar públicos, acompanhar interações, gerar relatórios detalhados e potencializar a atuação do mandato — tudo de forma simples, segura e acessível.`,
+        // por exemplo, imagem ilustrativa do formulário dentro da seção
+        image: FormMantatotec
       },
       {
         id: 'desenvolvimento',
         title: 'Processo de desenvolvimento',
         content: (
-          <ol className="lista">
-            <li className="topico">Imersão
-              <ul>
-                <li>Entrevistas com equipes parlamentares</li>
-                <li>Mapeamento das rotinas reais de trabalho</li>
-              </ul>
-            </li>
+          <div className="lista">
+            <div className="topico"><span>Imersão</span>
+              <p>Entrevistas com equipes parlamentares</p>
+              <p>Mapeamento das rotinas reais de trabalho</p>
+            </div>
 
-            <li className="topico">Protótipo e Design UX/UI
-              <ul>
-                <li>Interface moderna, leve e responsiva</li>
-                <li>Navegação intuitiva, mesmo para usuários não técnicos</li>
-              </ul>
-            </li>
+            <div className="topico"><span>Protótipo e Design UX/UI</span>
+              <p>Interface moderna, leve e responsiva</p>
+              <p>Navegação intuitiva, mesmo para usuários não técnicos</p>
+            </div>
 
-            <li className="topico">Desenvolvimento Ágil
-              <ul>
-                <li>Front-end com React + Vite</li>
-                <li>Back-end com Node.js + banco relacional (Mysql)</li>
-                <li>Versionamento via GitHub</li>
-                <li>Deploy em nuvem automatizado</li>
-              </ul>
-            </li>
+            <div className="topico"><span>Desenvolvimento Ágil</span>
+              <p>Front-end com React + Vite</p>
+              <p>Back-end com Node.js + banco relacional (Mysql)</p>
+              <p>Versionamento via GitHub</p>
+              <p>Deploy em nuvem automatizado</p>
+            </div>
 
-            <li className="topico">Testes com equipes reais
-              <ul>
-                <li>Ajustes com base em feedbacks diretos</li>
-                <li>Implantação assistida com treinamento</li>
-              </ul>
-            </li>
-          </ol>
+            <div className="topico"><span>Testes com equipes reais</span>
+              <p>Ajustes com base em feedbacks diretos</p>
+              <p>Implantação assistida com treinamento</p>
+            </div>
+          </div>
         ),
       },
     ],
@@ -137,33 +141,57 @@ const projects = {
     title: 'Conecta Anápolis',
     intro:
       'O Conecta Anápolis é um aplicativo inovador desenvolvido para reunir em um único lugar diversos serviços da Prefeitura de Anápolis. Criado para facilitar o acesso da população, o app integra funcionalidades essenciais do dia a dia, modernizando a relação entre o cidadão e a administração pública.',
+    tag: 'App',
+    tagId: 'app',
     imagemCapa: ConectaTop,
     topoImageId: 'conecta-imagem-topo',
-    gallery: [ConectaTela, ConectaAreas, ConectaProtocolos],
-    galleryId: 'conecta-imagem',
+    // agora as imagens do app estão dentro das sections
     sections: [
       {
         title: 'O desafio',
         content:
-          'Antes do Conecta Anápolis, os cidadãos precisavam navegar entre diferentes portais, fazer ligações para setores distintos ou até mesmo se deslocar presencialmente para resolver tarefas simples. A ausência de centralização gerava filas, sobrecarga no atendimento interno e dificuldades tanto para servidores quanto para a população.'
+          'Antes do Conecta Anápolis, os cidadãos precisavam navegar entre diferentes portais, fazer ligações para setores distintos ou até mesmo se deslocar presencialmente para resolver tarefas simples. A ausência de centralização gerava filas, sobrecarga no atendimento interno e dificuldades tanto para servidores quanto para a população.',
+        image: ConectaAreas
       },
       {
         title: 'Meu papel no projeto',
         content:
-          'Atuei como Supervisor da Equipe de Suporte Técnico, sendo responsável por testar e validar cada sprint entregue pela equipe de desenvolvimento, garantindo que o aplicativo fosse funcional, coerente e aderente às necessidades reais da população.'
+          'Atuei como Supervisor da Equipe de Suporte Técnico, sendo responsável por testar e validar cada sprint entregue pela equipe de desenvolvimento, garantindo que o aplicativo fosse funcional, coerente e aderente às necessidades reais da população.',
+        image: ConectaProtocolos
       },
       {
         id: 'desenvolvimento',
         title: 'Processo de desenvolvimento',
         content: (
-          <ol className="lista">
-            <li className="topico">Imersão<ul><li>Levantamento das necessidades de serviços da Prefeitura</li><li>Mapeamento de fluxos e gargalos no atendimento ao cidadão</li></ul></li>
-            <li className="topico">Design UX/UI<ul><li>Interface moderna, acessível e responsiva</li><li>Experiência pensada para todos os públicos</li></ul></li>
-            <li className="topico">Desenvolvimento Ágil<ul><li>Metodologia SCRUM com entregas contínuas</li><li>Validação técnica a cada sprint (com minha participação direta)</li><li>Integração com sistemas internos da Prefeitura</li><li>Infraestrutura em nuvem</li></ul></li>
-            <li className="topico">Testes e validações<ul><li>Testes de usabilidade e performance</li><li>Ajustes feitos com feedback real de usuários</li><li>Correções alinhadas entre suporte e desenvolvimento</li></ul></li>
-            <li className="topico">Implantação e Treinamento<ul><li>Apresentação pública do aplicativo</li><li>Treinamentos para servidores e população</li><li>Acompanhamento pós-lançamento</li></ul></li>
-          </ol>
-        )
+          <div className="lista">
+            
+            <div className="topico"><span>Imersão</span>
+              <p>Levantamento das necessidades de serviços da Prefeitura</p>
+              <p>Mapeamento de fluxos e gargalos no atendimento ao cidadão</p>
+            </div>
+
+            <div className="topico"><span>Design UX/UI</span>
+              <p>Interface moderna, acessível e responsiva</p>
+              <p>Experiência pensada para todos os públicos</p>
+            </div>
+
+            
+
+            <div className="topico">
+              <span>Testes e validações</span>
+              <p>Testes de usabilidade e performance</p>
+              <p>Ajustes feitos com feedback real de usuários</p>
+              <p>Correções alinhadas entre suporte e desenvolvimento</p>
+            </div>
+
+            <div className="topico"><span>Implantação e Treinamento</span>
+              <p>Apresentação pública do aplicativo</p>
+              <p>Treinamentos para servidores e população</p>
+              <p>Acompanhamento pós-lançamento</p>
+            </div>
+          </div>
+        ),
+        
       }
     ]
   },
@@ -172,25 +200,48 @@ const projects = {
     title: 'App de Divisão de Despesas',
     intro:
       'Desenvolvido para facilitar a divisão de gastos entre amigos durante eventos, viagens ou situações do dia a dia, o app permite controle total das despesas e sincronização automática entre os participantes. Funciona de forma offline-first, garantindo usabilidade mesmo sem internet.',
+    tag: 'App',
+    tagId: 'app',
     imagemCapa: TopoImagemDespesas,
-    gallery: [TelaCadastroDespesa, TelaSaldo, TelaDetalhesApp],
+    topoImageId: 'divisao-imagem-topo',
     sections: [
       {
         title: 'O desafio',
         content:
-          'Em encontros entre amigos, é comum que alguém pague por todos e depois precise dividir os custos. O desafio era criar um app simples, funcional e rápido que registrasse os gastos e mostrasse de forma clara quem deve o quê para quem — mesmo offline.'
+          'Em encontros entre amigos, é comum que alguém pague por todos e depois precise dividir os custos. O desafio era criar um app simples, funcional e rápido que registrasse os gastos e mostrasse de forma clara quem deve o quê para quem — mesmo offline.',
+        image: TelaCadastroDespesa
       },
       {
         id: 'desenvolvimento',
         title: 'Processo de desenvolvimento',
         content: (
-          <ol className="lista">
-            <li className="topico">Levantamento de requisitos<ul><li>Estudo de uso real em eventos entre amigos</li><li>Foco em usabilidade offline e simplicidade</li></ul></li>
-            <li className="topico">Protótipo e Design<ul><li>Layout limpo e moderno com foco mobile-first</li><li>Interface amigável para usuários leigos</li></ul></li>
-            <li className="topico">Desenvolvimento técnico<ul><li>React Native + TypeScript</li><li>Banco de dados local com SQLite</li><li>Sincronização automática com servidor remoto</li><li>Persistência de dados com lógica offline-first</li></ul></li>
-            <li className="topico">Validação e testes<ul><li>Testes em Android real e emulador</li><li>Simulação de uso sem internet</li><li>Ajustes finos de performance e UX</li></ul></li>
-          </ol>
-        )
+          <div className="lista">
+            <div className="topico"><span>Levantamento de requisitos</span>
+              <p>Estudo de uso real em eventos entre amigos</p>
+              <p>Foco em usabilidade offline e simplicidade</p>
+            </div>
+
+            <div className="topico"><span>Protótipo e Design</span>
+              <p>Layout limpo e moderno com foco mobile-first</p>
+              <p>Interface amigável para usuários leigos</p>
+            </div>
+
+            <div className="topico"><span>Desenvolvimento técnico</span>
+              <p>React Native + TypeScript</p>
+              <p>Banco de dados local com SQLite</p>
+              <p>Sincronização automática com servidor remoto</p>
+              <p>Persistência de dados com lógica offline-first</p>
+            </div>
+
+            <div className="topico"><span>Validação e testes</span>
+              <p>Testes em Android real e emulador</p>
+              <p>Simulação de uso sem internet</p>
+              <p>Ajustes finos de performance e UX</p>
+            </div>
+          </div>
+        
+        ),
+       // images: [TelaSaldo, TelaDetalhesApp]
       }
     ]
   },
@@ -199,29 +250,31 @@ const projects = {
     title: 'Integração Ábaris ↔ Lyceum',
     intro:
       'Criamos uma ponte eficiente entre Ábaris e Lyceum para automatizar a importação de documentos e reduzir trabalho manual.',
-    imagemCapa: TopoImagemIntegracao,
-    gallery: [DiagramaFluxoIntegracao],
+    tag: 'Web',
+    tagId: 'web',
     sections: [
       {
         title: 'O desafio',
         content:
-          'A rotina de importar manualmente documentos anexados no sistema Ábaris para o Lyceum era repetitiva, sujeita a erros e demandava tempo. O desafio era criar uma integração automática entre os dois sistemas.'
+          'A rotina de importar manualmente documentos anexados no sistema Ábaris para o Lyceum era repetitiva, sujeita a erros e demandava tempo. O desafio era criar uma integração automática entre os dois sistemas.',
+        image: DiagramaFluxoIntegracao
       },
       {
         id: 'desenvolvimento',
         title: 'Solução técnica',
         content: (
-          <div>
-            <p>Utilizando o Node.js como base da arquitetura, desenvolvi um sistema de integração robusto e flexível:</p>
-            <ul className="lista">
-              <li>Criação de rotinas assíncronas com controle fino de execução</li>
-              <li>Tratamento de erros e fallback automático para reenvio</li>
-              <li>Logs estruturados para auditoria e análise de falhas</li>
-              <li>Validação e normalização dos dados</li>
-              <li>Envio automático dos documentos ao Lyceum via API</li>
-            </ul>
+          <div className='lista'>
+            
+            <div className="topico">
+              <span>Utilizando o Node.js como base da arquitetura, desenvolvi um sistema de integração robusto e flexível:</span>
+              <p>Criação de rotinas assíncronas com controle fino de execução</p>
+              <p>Tratamento de erros e fallback automático para reenvio</p>
+              <p>Logs estruturados para auditoria e análise de falhas</p>
+              <p>Validação e normalização dos dados</p>
+              <p>Envio automático dos documentos ao Lyceum via API</p>
+            </div>
           </div>
-        )
+        ),
       }
     ]
   },
@@ -231,25 +284,25 @@ const projects = {
     intro:
       'Sistema para gerenciar emissão de notas fiscais e acompanhamento de pagamentos por projeto, com painel em Power BI.',
     imagemCapa: ImagemTopoFinanceiro,
-    gallery: [ImagemSistemaFinanceiro],
     sections: [
       {
         title: 'O desafio',
         content:
-          'A gestão financeira por projeto era feita de forma descentralizada. O objetivo: visibilidade, controle e padronização.'
+          'A gestão financeira por projeto era feita de forma descentralizada. O objetivo: visibilidade, controle e padronização.',
+        image: ImagemSistemaFinanceiro
       },
       {
         id: 'desenvolvimento',
         title: 'Solução técnica',
         content: (
-          <div>
-            <p>Para resolver esse problema foi desenvolvido um sistema web:</p>
-            <ul className="lista">
-              <li>React.js frontend</li>
-              <li>Node.js + PostgreSQL no backend</li>
-              <li>Painel de BI com Power BI</li>
-              <li>Controle por níveis de acesso</li>
-            </ul>
+          <div className='lista'>
+            <div className="topico">
+              <span>Para resolver esse problema foi desenvolvido um sistema web</span>
+              <p>React.js frontend</p>
+              <p>Node.js + PostgreSQL no backend</p>
+              <p>Painel de BI com Power BI</p>
+              <p>Controle por níveis de acesso</p>
+            </div>
           </div>
         )
       }
@@ -257,7 +310,7 @@ const projects = {
   }
 };
 
-// Exportações específicas para manter compatibilidade com seu uso atual
+// Exports
 export const Mandatotec = () => <ProjectDetails project={projects.mandatotec} />;
 export const ConectaAnapolis = () => <ProjectDetails project={projects.conecta} />;
 export const AppDespesa = () => <ProjectDetails project={projects.appDespesa} />;

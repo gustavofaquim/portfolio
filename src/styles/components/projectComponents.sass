@@ -15,48 +15,74 @@
     background-color: #FAFAFA
 
     .details
-        width: 80%
+        width: 90%
         margin: auto
         background-color: #fafafa
-
+        margin-bottom: 100px
+        
     .topo
         width: 100%
         margin: auto
         display: flex
         padding: 20px
         justify-content: center
-        flex-wrap: wrap
         align-items: center
+        flex-wrap: wrap
        
-        
 
         .topo-textos
-            width: 90%
-            min-width: 300px
-            
+            width: 50%
+            display: flex
+            flex-direction: column
+            text-align: left
+
             h1
-                text-align: left
                 color: #242424!important
-                font-size: 3em !important 
+                font-size: 2.5em !important 
                 margin-bottom: 0px !important
             p
                 color: #242424 !important
                 line-height: 2
-                font-size: 1.4em
+                font-size: 1.1em
                 margin-top: 20px
                 line-height: 40px
 
+            .web
+                width: 100px
+                padding: 2px 30px 2px 30px
+                background-color: #eef2ff
+                border-radius: 15px
+                margin-top: 20px
+                color: #4f46e5
+                margin-bottom: 20px
+                font-weight: 500
+            
+            .app
+                width: 100px
+                padding: 2px 30px 2px 30px
+                background-color: #eef2ff
+                border-radius: 15px
+                margin-top: 20px
+                margin-bottom: 20px
+                color: #1383af
+                font-weight: 500
 
-    .imagem-geral
-        width: 250px
+
+    .imagem-capa
+        width: 500px
         //min-width: 350px
         background-color: #ffffff
         margin: auto
+        border-radius: 20px
         margin-top: 20px
         margin-bottom: 20px
+
         img
             width: 100%
             margin: auto
+    
+    #conecta-imagem-topo, #divisao-imagem-topo
+        width: 250px 
         
 
     .corpo
@@ -88,7 +114,7 @@
             margin: auto
 
             .texto
-                font-size: 1.4em
+                font-size: 1.2em
                 color: #242424!important
                 line-height: 2em
                 font-weight: 450
@@ -100,19 +126,35 @@
                     font-weight: 700
                     color: #242424!important
                     
-
                 .descricao
                     margin-top: 20px
+
+                .section-images
+                    width: 100%
+                    margin: auto
+                    text-align: center
+                    margin-top: 25px
+                    margin-bottom: 25px
+
+                    img     
+                        width: 250px
             
-            #desenvolvimento,  #resultados, #aprendizados
-                margin-top: 50px
+    
 
                 .lista
-                    margin-left: 80px
-                    margin-top: 20px
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+
                     .topico
+                        border-radius: 10px
                         margin-top: 20px
-                        font-weight: 600
+                        font-weight: 500
+                        padding: 20px
+                        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px
+                
+                    span
+                        color: #1362CA
 
            
              

@@ -62,15 +62,6 @@ const ProjectsContainer = () =>{
                         </div>
                         </Link>
 
-                        {/*<div className="technologies">
-                            {
-                                project?.technologies.map((tec) => (
-                                    <span className={`${tec.class} tag-technologies`}> {tec.name} </span>
-                                ))
-                            }
-                        </div> */}
-
-                    
                 
                     </div>
                     
