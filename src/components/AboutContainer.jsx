@@ -1,6 +1,5 @@
 
 import ParticlesBackground from '../components/ParticlesBackground.jsx';
-import MinhaFoto from "../img/eu.jpeg"
 import Typewriter from "typewriter-effect";
 
 const AboutContainer = () =>{

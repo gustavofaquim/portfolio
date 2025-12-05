@@ -7,7 +7,7 @@ import TopoImagemDespesas from "../img/projetos/details/appdespesahome.png";
 import TelaCadastroDespesa from "../img/projetos/details/appdespesacadastro.png";
 import TelaSaldo from "../img/projetos/details/appdespesassaldo.png";
 import TelaDetalhesApp from "../img/projetos/details/appdespesatela.png";
-import TopoImagemIntegracao from "../img/projetos/integracaocapa.png";
+//import TopoImagemIntegracao from "../img/projetos/integracao.jpeg";
 import DiagramaFluxoIntegracao from "../img/projetos/details/fluxoIntegracao.png";
 import ImagemTopoFinanceiro from "../img/projetos/details/gestor_financeiro_add.png";
 import ImagemSistemaFinanceiro from "../img/projetos/details/gestor_financeiro_recebidos.png";
@@ -15,6 +15,8 @@ import ConectaTop from "../img/projetos/details/conecta_inicial.jpeg";
 import ConectaTela from "../img/projetos/details/conecta_inicial.jpeg";
 import ConectaAreas from "../img/projetos/details/conecta_areas.jpeg";
 import ConectaProtocolos from "../img/projetos/details/conecta_protocolos.jpeg";
+import Aquitem from "../img/projetos/aquitem.png"
+import AquitemHome from "../img/projetos/details/aquitem_home.png"
 
 /*
   ProjectDetails atualizado:
@@ -62,7 +64,7 @@ const ProjectDetails = ({ project }) => {
 
                 {/* Renderiza imagens da seção se houver */}
                 {(sec.image || (sec.images && sec.images.length > 0)) && (
-                  <div className="section-images">
+                  <div className="section-images" id={project.imageId || ''}>
                     {sec.image && <img src={sec.image} alt={`${project.title} - ${sec.title}`} />}
                     {sec.images && sec.images.map((src, i) => (
                       <img key={i} src={src} alt={`${project.title} - ${sec.title} - ${i}`} />
@@ -137,6 +139,63 @@ const projects = {
     ],
   },
 
+
+  aquitem: {
+  title: 'Aqui Tem',
+  intro:
+    'O Aqui Tem é uma plataforma desenvolvida para conectar cidadãos a serviços, comércios e pontos importantes da cidade, oferecendo praticidade e rapidez na busca por informações essenciais.',
+  tag: 'App',
+  tagId: 'app',
+  imagemCapa: AquitemHome,
+  topoImageId: 'aquitem-imagem-topo',
+  imageId: 'aquitem-imagem',
+  sections: [
+    {
+      title: 'O desafio',
+      content:
+        'Antes do Aqui Tem, informações sobre serviços locais, estabelecimentos e pontos de interesse estavam dispersas e de difícil acesso. O desafio foi centralizar esses dados em uma única plataforma intuitiva, ao alcance de qualquer cidadão.',
+      
+    },
+    {
+      title: 'Meu papel no projeto',
+      content:
+        'No Aqui Tem, atuei no desenvolvimento e aperfeiçoamento da plataforma, garantindo organização dos dados, navegação eficiente e um layout limpo e moderno.',
+      
+    },
+    {
+      id: 'desenvolvimento',
+      title: 'Processo de desenvolvimento',
+      content: (
+        <div className="lista">
+          <div className="topico"><span>Levantamento de requisitos</span>
+            <p>Mapeamento do que a população mais busca</p>
+            <p>Identificação das categorias prioritárias</p>
+          </div>
+
+          <div className="topico"><span>Design UX/UI</span>
+            <p>Interface simples, rápida e organizada por filtros</p>
+            <p>Navegação otimizada para dispositivos móveis</p>
+          </div>
+
+          <div className="topico"><span>Desenvolvimento técnico</span>
+            <p>React.js no front-end</p>
+            <p>Node.js</p>
+            <p>Banco de dados não relacional</p>
+          </div>
+
+          <div className="topico"><span>Testes e validação</span>
+            <p>Feedback contínuo de usuários reais</p>
+            <p>Ajustes de categorização, buscas e filtros</p>
+          </div>
+        </div>
+      ),
+      // opcional
+      // images: [ImagemAquiTem1, ImagemAquiTem2]
+    }
+  ]
+},
+
+
   conecta: {
     title: 'Conecta Anápolis',
     intro:
@@ -145,6 +204,7 @@ const projects = {
     tagId: 'app',
     imagemCapa: ConectaTop,
     topoImageId: 'conecta-imagem-topo',
+    imageId: 'conecta-imagem',
     // agora as imagens do app estão dentro das sections
     sections: [
       {
@@ -204,6 +264,7 @@ const projects = {
     tagId: 'app',
     imagemCapa: TopoImagemDespesas,
     topoImageId: 'divisao-imagem-topo',
+    imageId: 'divisao-imagem',
     sections: [
       {
         title: 'O desafio',
@@ -251,6 +312,7 @@ const projects = {
     intro:
       'Criamos uma ponte eficiente entre Ábaris e Lyceum para automatizar a importação de documentos e reduzir trabalho manual.',
     tag: 'Web',
+    //imagemCapa: TopoImagemIntegracao,
     tagId: 'web',
     sections: [
       {
@@ -312,6 +374,7 @@ const projects = {
 
 // Exports
 export const Mandatotec = () => <ProjectDetails project={projects.mandatotec} />;
+export const AquiTem = () => <ProjectDetails project={projects.aquitem} />;
 export const ConectaAnapolis = () => <ProjectDetails project={projects.conecta} />;
 export const AppDespesa = () => <ProjectDetails project={projects.appDespesa} />;
 export const IntegracaoAbarysLyceum = () => <ProjectDetails project={projects.integracao} />;

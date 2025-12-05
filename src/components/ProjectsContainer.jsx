@@ -1,27 +1,62 @@
 import React from "react";
-import { AiOutlineApi } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-import { PiCertificateLight } from "react-icons/pi";
-import { SlArrowRight } from "react-icons/sl";
 
 import '../styles/components/projectsContainer.sass';
 
-import Prontuario from "../img/projetos/integracaocapa.png"
-import Mandatotec from "../img/projetos/capamandatotec.png";
+import Arrow from "../img/icones/arrow-up-right-square.svg"
+import Mandatotec from "../img/projetos/logo/mandatotec.png";
 import AppDespesas from "../img/projetos/appdespesascapa.png";
 import GestorFinanceiro from "../img/projetos/gestor_financeiro_add.png"
-import ConectaAnapolis from "../img/projetos/conecta_anapolis.png"
+import Integracao from "../img/projetos/logo/integracao.png"
+import ConectaAnapolis from "../img/projetos/logo/conectaanapolis.png"
+import AquiTem from "../img/projetos/logo/aquitem.png"
 
 
 const projects = [
-    { id: "conecta",  name: "Conecta Anápolis", type: 'App Mobile', img: ConectaAnapolis},
-    { id: "mandatotec",  name: "Mandatotec", type: 'Sistema', img: Mandatotec},
-    { id: "appdespesa", name: "App Despesas",  type: 'App Mobile', img: AppDespesas},
-    { id: "gestorfinanceiro", name: "Gestor Financeiro",  type: 'Sistema', img: GestorFinanceiro },
-    { id: "prontuario", name: "Integração Lyceum",  type: 'Integração', img: Prontuario },
-    
+  { 
+    id: "aquitem",  
+    name: "Aqui Tem", 
+    desc: "App que conecta moradores a serviços, comércios e utilidades locais.",
+    type: "App Mobile", 
+    img: AquiTem
+  },
+  { 
+    id: "conecta",  
+    name: "Conecta Anápolis", 
+    desc: "Aplicativo oficial que centraliza serviços públicos e solicitações do cidadão.",
+    type: "App Mobile", 
+    img: ConectaAnapolis
+  },
+  { 
+    id: "mandatotec",  
+    name: "Mandatotec", 
+    desc: "Sistema para gestão de apoiadores, segmentação e análise de dados.",
+    type: "Sistema", 
+    img: Mandatotec
+  },
+  { 
+    id: "appdespesa", 
+    name: "App Despesas",  
+    desc: "App para registrar e dividir despesas entre amigos de forma simples.",
+    type: "App Mobile", 
+
+  },
+  { 
+    id: "gestorfinanceiro", 
+    name: "Gestor Financeiro",  
+    desc: "Sistema web para controle financeiro, organização e relatórios.",
+    type: "Sistema", 
+  },
+  { 
+    id: "prontuario", 
+    name: "Integração Lyceum",  
+    desc: "Integração para sincronização de dados acadêmicos entre sistemas.",
+    type: "Integração", 
+    img: Integracao, 
+  }
 ];
+
 
 
 const ProjectsContainer = () =>{
@@ -44,22 +79,29 @@ const ProjectsContainer = () =>{
                 {projects.map((project) => (
 
                     <div className="project-card" id={project.id} key={project.id} >
-                        <Link to={`/project/${project.id}`}>
-                        <div className="project-icon">
-                            <img src={project.img} alt="" />
-                        </div>
+                        
+                       
                 
                         <div className="card-info">
-                            <div className="text-card">
-                                <p className="title-card">{project.name}</p>
-                                <p className="title-type">{project.type}</p>
-                                {/*<p className="desc-card">{project.desc}</p> */}
-                            </div>
 
-                           
-                            <SlArrowRight className="card-icone-navegacao" />
-                            
+                            <div className="area-titulo">
+                                {project.img ?
+                                    <img src={project.img} className="img-projeto" alt={project.name}/>
+                                    :
+                                    <p className="title-card">{project.name}</p>
+                                    }
+                            </div>
+                                
+
+                            <div className="text-card">  
+                                <p className="desc-card">{project.desc}</p>
+                                
+                                {/*<p className="desc-card">{project.desc}</p> */}
+                            </div>   
                         </div>
+
+                        <Link to={`/project/${project.id}`} className="btnMaisDetalhes">
+                            <img src={Arrow} /> <span>detalhes</span>
                         </Link>
 
                 

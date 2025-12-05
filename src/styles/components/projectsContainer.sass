@@ -6,7 +6,7 @@
     flex-wrap: wrap
     width: 100%
     margin: auto
-    background: #fafafa
+    background: #ffffff
 
     a
         text-decoration: none
@@ -61,21 +61,18 @@
         margin-top: 100px
        
         .project-card
-            border-radius: 10px
+            border-radius: 8px
             display: block
             width: 30%
             margin: auto
             height: auto
             max-width: 900px
-            padding: 0.6rem
+            padding: 60px 35px
             margin-bottom: 2rem
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
-            margin-top: 2rem           
+            box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8          
             text-align: center
             align-items: center 
             justify-content: center 
-            cursor: pointer
-
 
             @media (max-width: 950px)
                 display: inline
@@ -85,64 +82,63 @@
                 display: inline
                 width: 85%
 
-
-            .card-info
+            
+            .btnMaisDetalhes
+                width: 180px
+                padding: 5px 10px 5px 10px
+                margin: auto
+                font-size: 1em
+                margin-top: 25px
+                background-color: #ebf5ff
+                color: #0068d1
+                font-weight: 450
+                border-radius: 5px
                 display: flex
-                text-align: center
+                flex-direction: row
                 align-items: center
+                justify-content: center
+                
+                span
+                    margin-left: 5px
 
-                .card-icone-navegacao
-                    color: #757575
-                    opacity: 0
-                    transform: translateX(-5px)
-                    transition: opacity 0.3s ease, transform 0.3s ease
-                   
-
-            &:hover
-                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)
-                .card-icone-navegacao
-                    opacity: 1
-                    transform: translateX(0)
-                    
+                &:hover
+                    text-decoration: none
+                    background-color: #ebf5ff
+                    color: #0068d1      
 
 
-            .text-card 
-                margin-top: 20px   
-                margin-left: 15px
-                margin-bottom: 10px 
-                width: 90%  
+            .area-titulo
+                width: 100%
+                margin: auto
+                text-align: center
+                height: 60px
+                align-content: center
+                overflow: hidden
+
+                .img-projeto
+                    width: 140px
            
                 .title-card
-                    text-align: left
                     font-size: 1.1em
                     color: #0C1225
-                    font-weight: 350
+                    font-weight: 600
+
+            .text-card 
+                width: 100%
+                margin: auto
+                text-align: center
+
+                .desc-card
+                    margin-top: 20px
+                    font-size: 1em
+                    color: #141c3abe
+                    font-weight: 600
 
                 .title-type
                     font-size: 0.9em
-                    text-align: left
                     color: #757575
 
-
-                .desc-card
-                    font-size: 0.8em
-                    text-align: left
-                    height: 120px
             
-              
-                
-            .project-icon
-                height: 220px
-                border-radius: 8px
-                background-color: #ECECEC
-                overflow: hidden
-
-                img
-                    width: 100%
-                    height: 100%
-                    object-fit: cover
-                    border-radius: 8px
-
 
             .technologies
                 width: 100%
