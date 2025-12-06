@@ -9,7 +9,13 @@ const JourneyContainer = () => {
   return (
     <section id='jornada' className='journey'>
 
-      <div className="titulo">
+      <div className="fundoAzul">
+
+      </div>
+
+      <div className="area-total">
+
+        <div className="titulo">
           <h3>Minha jornada até aqui</h3>
           <p>Um pouco do caminho trilhado</p>
       </div>
@@ -57,6 +63,10 @@ const JourneyContainer = () => {
         </div>
 
       </div>
+
+      </div>
+
+      
 
     </section>
   );

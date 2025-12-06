@@ -72,7 +72,7 @@ const ProjectsContainer = () =>{
 
             <div className="projects-container-title">
                 <h3>Projetos em Destaque</h3>
-                <p>Alguns dos principais projetos que desenvolvi ou participei.</p>
+                <p>Alguns dos principais projetos que desenvolvi ou participei</p>
             </div>
 
                 <div className="projects-grid">
