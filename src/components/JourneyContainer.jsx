@@ -35,7 +35,7 @@ const JourneyContainer = () => {
           <div className="formacao" id='graduacao'>
               <p className="titulo">Bacharelado em Sistemas de Informação</p> <br />
               <a className="link" href="https://ifgoiano.edu.br/home/index.php" target="_blak">Instituto Federal de Educação, Ciência e Tecnologia Goiano</a>
-              <p className="descricao">Durante a graduação, desenvolvi uma base sólida em lógica de programação, estruturas de dados, engenharia de software e banco de dados. Esse período foi essencial para minha compreensão sistêmica da tecnologia e para o desenvolvimento de um pensamento analítico voltado à resolução de problemas reais.</p>
+              <p className="descricao">Na graduação, consolidei conhecimentos em lógica, estruturas de dados, engenharia de software e banco de dados, ampliando minha visão sistêmica e minha habilidade de solucionar problemas.</p>
           </div>
 
         </div>
@@ -47,15 +47,20 @@ const JourneyContainer = () => {
               <p className="titulo">Supervisor Técnico</p> <br />
               <a className="link" href="https://www.linkedin.com/company/icicuritiba" target="_blak">Instituto das Cidades Inteligentes</a>
               <div className="calendario"><FaCalendar/> <p>2024 - atualmente</p></div>
-              <p className="descricao">Atualmente coordeno uma equipe de suporte técnico responsável pelas soluções oferecidas à Prefeitura Municipal de Anápolis. Minhas atividades incluem desenvolvimento de integrações entre sistemas, desenvolvimento de BI, produção de relatórios estratégicos, testes de software, documentação de requisitos e condução de implantações de novas soluções. Além disso, participo ativamente de reuniões com clientes e automatizo fluxos de atendimento via WhatsApp, tornando os contatos mais eficientes e inteligentes.</p>
+              <p className="descricao">Coordeno a equipe de suporte técnico das soluções para a Prefeitura de Anápolis, desenvolvendo integrações, BI e relatórios. Também realizo testes, documentação, implantações e automatizo fluxos de atendimento via WhatsApp.</p>
           </div>
 
+          <div className="emprego">
+              <p className="titulo">Empreendedorismo e Consultoria</p> <br />
+              <div className="calendario"><FaCalendar/> <p>2023 - atualmente</p></div>
+              <p className="descricao">Além da atuação profissional, sou proprietário de uma empresa de consultoria e desenvolvimento, onde realizo projetos sob demanda para clientes, criando soluções personalizadas em tecnologia.</p>
+          </div>        
 
           <div className="emprego">
               <p className="titulo">Analista de Sistemas</p> <br />
               <a className="link" href="https://www.linkedin.com/school/unievangelica/" target="_blak">UniEvangélica</a>
               <div className="calendario"><FaCalendar/> <p>2021 - 2024</p></div>
-              <p className="descricao">Atuei na sustentação e manutenção do sistema acadêmico Lyceum, realizando integrações entre sistemas, desenvolvimento de relatórios personalizados e rotinas de banco de dados. Também ofereci suporte técnico aos usuários, garantindo o funcionamento contínuo das operações e contribuindo com melhorias baseadas na análise dos dados da instituição.</p>
+              <p className="descricao">Atuei na manutenção do Lyceum, com desenvolvimento de integrações, relatórios e rotinas SQL, suporte a usuários e melhorias orientadas por análise de dados</p>
           </div>
 
 
