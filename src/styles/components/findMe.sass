@@ -23,7 +23,7 @@
             display: flex
             border-radius: 10px
             padding: 35px
-            min-height: 130px
+            min-height: 150px
             width: 65%
             min-width: 250px
             margin: auto
@@ -33,16 +33,17 @@
             align-content: center
             align-items: center
             justify-content: space-between
+            flex-wrap: wrap
+            overflow-wrap: break-word
 
             p
-                font-size: 14pt
-                width: 50%
+                font-size: 1.3em
                 margin: auto
                 font-weight: 600
-                min-width: 250px
                 color: #FFFFFF
                 font-weight: 400
                 line-height: 1.3
+                text-align: center
 
             .btn-conversar
                 border: 1px solid #1362CA
@@ -50,6 +51,9 @@
                 color: #FFFFFF
                 border-radius: 20px
                 text-decoration: none
+                min-width: 180px
+                margin: auto
+                margin-top: 20px
 
                 &:hover
                     background-color: #1362CA
@@ -57,9 +61,10 @@
         .area-contato
             width: 100%
             margin-top: 100px
+        
         .contato
             margin: auto
-            width: 40rem
+            width: 60%
             
 
         .social
@@ -69,45 +74,42 @@
 
         #social-networks
             width: 100%
+            margin-top: 40px
            
         
         
         #information
-            display: inline-flex
+            display: flex
             width: 100%
             align-items: center 
             justify-content: center 
-
-            @media (max-width: 679px)
-                display: inline
+            flex-wrap: wrap
+            margin: auto
            
-            
             .info-card
+                display: flex
+                align-items: center 
+                justify-content: center
+                align-content: center
                 margin: auto
-                font-size: 1rem
+                font-size: 18pt
                 text-align: center
                 padding: 5px
+                color: #ffffff
+                gap: 8px 
 
-                h3
-                    font-size: 1.1rem 
+                p
+                    margin: 0             
+                    line-height: 1 
 
-        .title  
-            color: #FFFFFF
-            margin: auto
-            text-align: center
-        
-            h3
-                font-size: 1.4rem
-                font-weight: 500
 
-            p
-                color: variables.$text-color-secondary
-                margin-bottom: 1rem
-                line-height: 2rem
-                font-size: 1.1rem
-                text-align: center
-                font-weight: 400
+                svg
+                    display: block          
+                    font-size: 20px           
+                    width: 1.2em              
+                    height: 1.2em
 
+       
 
     
 

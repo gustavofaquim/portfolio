@@ -37,23 +37,20 @@ const FindMe = () => {
                 
                 <div className='contato'>
 
-                    <div  className="title">
-                        <h3>CONTATO</h3>
-                    </div>
-                    
+                  
                         
                     <div id='information'>
                         <div className='info-card'>
-                            <p><AiFillPhone id='phone-icon' /> (62) 996828796</p>
+                            <AiFillPhone id='phone-icon' />  <p>(62) 996828796</p>
                         </div>
 
                         <div className='info-card'>
-                            <p> <AiFillMail /> gustavofaquim408@gmail.com</p>
+                            <AiFillMail /> <p>gustavofaquim408@gmail.com</p>
                         </div>
 
 
                         <div className='info-card'>
-                            <p><AiFillEnvironment id='pin-icon' /> Anápolis/GO</p>
+                            <AiFillEnvironment id='pin-icon' /> <p>Anápolis/GO</p>
                         </div>
 
                     </div>
