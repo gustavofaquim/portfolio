@@ -4,7 +4,6 @@
     width: 100%
     height: auto
     background-color: #ffffff
-
     
 
 .container-details
@@ -12,6 +11,7 @@
     margin: auto
     margin-top: 100px
     max-width: 1200px
+
 
     .details
         width: 90%
@@ -36,7 +36,7 @@
             text-align: left
 
             h1
-                color: #242424!important
+                color: #1362CA!important
                 font-size: 2.5em !important 
                 margin-bottom: 0px !important
             p
@@ -80,7 +80,7 @@
             width: 100%
             margin: auto
     
-    #conecta-imagem-topo, #divisao-imagem-topo, #aquitem-imagem-topo
+    #conecta-imagem-topo, #divisao-imagem-topo, #aquitem-imagem-topo, #zap24h-imagem-topo
         width: 250px 
         
 
@@ -117,16 +117,20 @@
                 color: #242424!important
                 line-height: 2em
                 font-weight: 450
-                 margin-top: 60px
+                margin-top: 60px
 
 
                 .titulo
-                    font-size: 1.4em
+                    font-size: 1.2em
                     font-weight: 700
                     color: #242424!important
                     
                 .descricao
+                    color: #242424 !important
+                    line-height: 2
+                    font-size: 0.9em
                     margin-top: 20px
+                    line-height: 40px
 
                 .section-images
                     width: 100%
@@ -138,7 +142,7 @@
                     img     
                         width: 500px
                 
-                #conecta-imagem, #divisao-imagem, #aquitem-imagem
+                #conecta-imagem, #divisao-imagem, #aquitem-imagem, #zap24h-imagem
                     img
                         width: 250px
             
@@ -160,6 +164,28 @@
                     span
                         color: #1362CA
 
+            .desafios-grid
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                width: 100%
+
+            
+                .card-desafio
+                    margin-top: 20px
+                    width: 48%
+                    padding: 20px
+                    border-radius: 8px
+                    box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #f0f1f5
+
+                    .card-title
+                        font-size: 13pt
+                        color: #1362CA
+
+                    .card-desc
+                        font-size: 11pt
+                        
+
            
              
                         
@@ -168,5 +194,9 @@
         .details
             margin-top:15rem
 
+@media (max-width: 688px)
+    .desafios-grid
+        .card-desafio
+            width: 100% !important
 
     

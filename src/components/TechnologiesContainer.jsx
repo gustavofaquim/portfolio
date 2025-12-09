@@ -62,7 +62,7 @@ import "../styles/components/technologiesContainer.sass";
               {technologies.map((tech) => (
                 <div className="technology-card" id={tech.id} key={tech.id}>
                   <div className="card-icone"><img src={tech.icon} alt="" /></div>
-                  {tech.name}
+                  <p>{tech.name}</p>
                 </div>
               ))}
             </div>

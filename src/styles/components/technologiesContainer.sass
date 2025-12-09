@@ -94,9 +94,41 @@
                 color: variables.$text-color
 
             .card-icone
-                border: 1px solide red
                 width: 100%
                 padding: 20px
 
                 img
                     width: 80%
+
+
+
+@media (max-width: 400px)
+    .technologies-container
+
+        .technologies
+            margin-bottom: 60px
+        .titulo
+            width: 90%
+            
+            h3
+                font-size: 1.5rem
+            p
+                font-size: 1rem
+                margin-top: 10px
+    
+
+        .technology-card
+            min-width: 85px !important
+            display: flex
+            justify-content: center
+            align-content: center
+
+            .card-icone
+                padding: 1px !important
+             
+               
+                img
+                    width: 100%
+                
+            p
+                font-size: 8pt !important

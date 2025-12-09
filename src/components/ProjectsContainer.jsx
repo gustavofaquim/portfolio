@@ -11,9 +11,25 @@ import GestorFinanceiro from "../img/projetos/gestor_financeiro_add.png"
 import Integracao from "../img/projetos/logo/integracao.png"
 import ConectaAnapolis from "../img/projetos/logo/conectaanapolis.png"
 import AquiTem from "../img/projetos/logo/aquitem.png"
+import Zap24 from "../img/projetos/logo/zap24h.png"
 
 
 const projects = [
+  
+  { 
+    id: "conecta",  
+    name: "Conecta Anápolis", 
+    desc: "Aplicativo oficial que centraliza serviços públicos e solicitações do cidadão.",
+    type: "App Mobile", 
+    img: ConectaAnapolis
+  },
+    { 
+    id: "zap24h",  
+    name: "Zap da Prefeitura", 
+    desc: "WhatsApp oficial da Prefeitura Municipal de Anápolis",
+    type: "Integração", 
+    img: Zap24
+  },
   { 
     id: "aquitem",  
     name: "Aqui Tem", 
@@ -22,25 +38,11 @@ const projects = [
     img: AquiTem
   },
   { 
-    id: "conecta",  
-    name: "Conecta Anápolis", 
-    desc: "Aplicativo oficial que centraliza serviços públicos e solicitações do cidadão.",
-    type: "App Mobile", 
-    img: ConectaAnapolis
-  },
-  { 
     id: "mandatotec",  
     name: "Mandatotec", 
     desc: "Sistema para gestão de apoiadores, segmentação e análise de dados.",
     type: "Sistema", 
     img: Mandatotec
-  },
-  { 
-    id: "appdespesa", 
-    name: "App Despesas",  
-    desc: "App para registrar e dividir despesas entre amigos de forma simples.",
-    type: "App Mobile", 
-
   },
   { 
     id: "gestorfinanceiro", 

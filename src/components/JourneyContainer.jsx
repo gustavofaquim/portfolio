@@ -15,10 +15,10 @@ const JourneyContainer = () => {
 
       <div className="area-total">
 
-        <div className="titulo">
+        <div className="titulo-sub">
           <h3>Minha jornada até aqui</h3>
           <p>Um pouco do caminho trilhado</p>
-      </div>
+        </div>
 
       <div className="area-coluna">
 
