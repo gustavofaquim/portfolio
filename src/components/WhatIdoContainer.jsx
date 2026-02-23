@@ -1,6 +1,6 @@
 import { MdWebAsset } from "react-icons/md";
-import { FaMagic, FaMobileAlt } from "react-icons/fa";
-import { FaLink, FaSquarePollVertical } from "react-icons/fa6";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaCode , FaSquarePollVertical, FaMagnifyingGlassChart    } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi2";
 
 
@@ -11,100 +11,90 @@ const WhatIdoContainer = () => {
     return(
         <section id='habilidades' className="what-container">
 
+        <div className="area-what-container">
+
+        
+        
         <div className="container-titulo">
             <div className="titulo">
-                <h3>O que eu posso fazer pelo seu projeto</h3>
-                <p>Soluções completas em tecnologia para acelerar resultados.</p>
+                <h3>Como eu posso ajudar?</h3>
+                <p>Soluções sob medida para o seu negócio.</p>
             </div>
         </div>
 
-
+        
         <div className="area-coisas">
 
-            <div className='coisas' id='desenvolvimento-web'>
-               <div className="icone">
-                    <MdWebAsset />
-               </div>
-
-                <div className="textos">
-                    <p className="titulo">Desenvolvimento Web</p>
-                    <p className="descricao">
-                        Da ideia à implementação, desenvolvo aplicações web modernas e responsivas que unem experiências de 
-                        usuário intuitivas a sistemas robustos de back-end. Alinhando tecnologia aos seus objetivos.
-                    </p>
+            <div className='coisas' id='landing-page'>
+              
+                <div className="icone">
+                    <MdWebAsset color='#0e77ff' />
                 </div>
+
+                <p className="titulo-coisas">Landing Pages</p>
+                <p className="descricao-coisas">Páginas de alta conversão focadas em gerar vendas e leads.</p>
             </div>
 
-            <div className='coisas' id='ui'>
-               <div className="icone">
-                    <FaMagic />
-               </div>
 
-                <div className="textos">
-                    <p className="titulo">UI/UX Design</p>
-                    <p className="descricao">
-                    Transformo ideias em interfaces funcionais e visualmente atraentes, focando na experiência do usuário em cada detalhe. Através de prototipagem, testes e design centrado no usuário, crio soluções que são intuitivas, acessíveis e eficazes.
-                    </p>
-                </div>
-            </div>
 
             <div className='coisas' id='mobile'>
-               <div className="icone">
-                    <FaMobileAlt />
-               </div>
-
-                <div className="textos">
-                    <p className="titulo">Mobile (Apps)</p>
-                    <p className="descricao">
-                    Crio aplicativos móveis que combinam performance, usabilidade e design moderno. Seja Android ou iOS, entrego experiências fluidas e funcionais que conectam marcas ao dia a dia das pessoas, com foco em praticidade e inovação.
-                    </p>
+                
+                <div className="icone">
+                    <FaMobileAlt color='#ED1B24'  />
                 </div>
+
+                <p className="titulo-coisas">Aplicativos</p>
+                <p className="descricao-coisas">Apps sob medida para potencializar seu negócio.</p>
             </div>
 
-            <div className='coisas' id='integracao'>
-               <div className="icone">
-                    <FaLink />
-               </div>
-
-                <div className="textos">
-                    <p className="titulo">Integrações de Sistemas</p>
-                    <p className="descricao">
-                    Conecto sistemas e plataformas para automatizar processos, melhorar fluxos de trabalho e garantir que as informações fluam com segurança e eficiência. Transformo operações isoladas em ecossistemas digitais integrados e inteligentes.
-                    </p>
+            <div className='coisas' id='sistemas'>
+                
+                <div className="icone">
+                    <FaCode  color='#83CD29' />
                 </div>
+
+                <p className="titulo-coisas">Sistemas Web</p>
+                <p className="descricao-coisas">Sistemas personalizados para automatizar processos.</p>
             </div>
 
 
-            <div className='coisas' id='data'>
-               <div className="icone">
-                    <FaSquarePollVertical />
-               </div>
-
-                <div className="textos">
-                    <p className="titulo">Data & Analytics</p>
-                    <p className="descricao">
-                        A partir de dados brutos, desenvolvo soluções que revelam padrões, comportamentos e oportunidades. Com dashboards interativos e relatórios personalizados, entrego insights que orientam decisões estratégicas e geram valor real.
-                    </p>
+            <div className='coisas' id='data'>            
+                <div className="icone">
+                    <FaSquarePollVertical color='#BD21F3' />
                 </div>
+
+                <p className="titulo-coisas">Dados</p>
+                <p className="descricao-coisas">Transforme dados em decisões inteligentes.</p>
+
+            </div>
+
+
+            <div className='coisas' id='seo'>
+                <div className="icone">
+                    <FaMagnifyingGlassChart color='#F0DC4E'   />
+                </div>
+                
+                <p className="titulo-coisas">SEO para Sites</p>
+                <p className="descricao-coisas">Seu site nas primeiras posições do Google.</p>
             </div>
 
 
             <div className='coisas' id='consultoria'>
-               <div className="icone">
-                    <HiUserGroup />
-               </div>
-
-                <div className="textos">
-                    <p className="titulo">Consultoria Técnica</p>
-                    <p className="descricao">
-                        Ofereço orientação estratégica para transformar ideias em soluções tecnológicas viáveis. Com base na minha experiência, ajudo a definir caminhos, escolher tecnologias e estruturar projetos com visão técnica e foco em resultados.
-                    </p>
+                
+                <div className="icone">
+                    <HiUserGroup color='#FE6036' />
                 </div>
+
+                <p className="titulo-coisas">Consultoria Técnica</p>
+                <p className="descricao-coisas">Arquitetura, padrões e performance para escalar.</p>
             </div>
+
+            
 
         </div>
 
 
+        </div>
         </section>
     )
 }

@@ -7,10 +7,9 @@
     position: relative
     width: 100%
     min-height: 100vh
-    height: 100vh 
-    display: flex     
+    height: 100vh    
     align-items: center
-    background-color: #1E1E1E
+    background-color: var(--bg)
     background-attachment: fixed
     background-size: cover
 
@@ -26,8 +25,6 @@
         width: 90%
         margin: auto
         margin-top: 200px
-        margin-bottom: 300px
-        display: flex
         align-items: center
         z-index: 1 // Garantir que o conteúdo apareça sobre as partículas
     
@@ -36,7 +33,7 @@
             @include mixins.subtitulo
         
         p
-            color: variables.$text-color
+            color: var(--text)
             margin-bottom: 1rem
             line-height: 2rem
             font-size: 1.2rem
@@ -65,7 +62,7 @@
                 margin-top: 30px
                 font-size: 3.5em
                 font-weight: 700
-                color: #FFFF
+                color: var(--text)
                 margin-bottom: 0 !important
 
             .subtitle
@@ -76,36 +73,83 @@
 
             .titulo-descricao
                 font-size: 12pt
-                color: #d7d6d6
-
-        
-            
-
+                color: var(--text)
         .container-img
             max-width: 280px
-            max-height: 40%
             min-width: 150px
             min-height: 150px
             width: 40%
             margin: auto
             text-align: center
             display: inline-block
-            padding: 3px
-            overflow: hidden
-            z-index: 200
+            
 
             img
-                border-radius: 2100%
-                max-width: 100%
-                height: auto
-                aspect-ratio: 1/1
-                object-fit: cover
-                border: 3px inset variables.$highlighted-text-color
+                width: 100%
+                display: block
+                border-radius: 7px
+                
+                
                 
 
+.about-contact
+    margin: auto
+    margin-top: 50px
+    display: flex
 
+    .social-btn
+        padding: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 999px
+        color: #bebebe
+        font-size: 19pt
 
-            
+    #linkedin:hover 
+        background-color: #0072b1
+        color: variables.$text-color
+        border: 0px solid
+
+    #github:hover 
+        background-color: #502779
+        color: variables.$text-color
+        border: 0px solid
+
+    #instagram:hover 
+        background-color: #bc2a8D
+        color: variables.$text-color
+        border: 0px solid
+
+    #whatsapp:hover 
+        background-color: #3DC44F
+        color: variables.$text-color
+        border: 0px solid
+
+.container-buttons   
+    border: none
+    margin-top: 30px 
+    button  
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 15px 30px
+        cursor: pointer
+        border: 1px solid #2078fd
+        border-radius: 50px
+        background: none 
+        color: var(--text)
+        font-size: 15px
+        gap: 8px
+        font-weight: bold
+
+        &:hover
+            background-color: #2078fd
+            color: '#FFFFFF' !important
+
+        svg
+            display: block
+
 
 @media (max-width: 933px)
     .about

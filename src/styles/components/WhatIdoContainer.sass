@@ -3,123 +3,83 @@
 
 .what-container
     display: flex
-    flex-wrap: wrap
-    margin: auto
-    background: #fafafa
-
-
-    .container-titulo
-        background: #1362CA
-        display: flex
-        flex-wrap: wrap
-        width: 100%
-        margin: auto
-        height: 500px
+    background-color: var(--bgSecondary)
     
 
+    .area-what-container
+        width: 90%
+        margin: auto
+        flex-wrap: wrap
+        gap: 40px
+        margin-bottom: 100px
+
+    .container-titulo
+        padding: 10px
+        margin-top: 150px
+        text-align: center
+
+    
     .titulo
         font-weight: 100
-        margin: auto
-        margin-top: 90px    
-        display: inline
-        width: 70%
-        text-align: center
-        color: #FFFFFF
-        //color: variables.$highlighted-text-color
-
+        color: var(--text)
+        
     h3
-        font-size: 2.2rem
+        font-size: 2.1rem
     p
-        font-size: 1.4rem
-        margin-top: 20px
+        font-size: 1rem
+        margin-top: 10px
         font-weight: 300
-        color: #d7d6d6
+        color: var(--text)
 
 .area-coisas
-    //background-color: #FFFFFF
-    padding: 20px
-    border-radius: 10px
-    width: 80%
-    margin: auto
-    margin-top: -220px
-    margin-bottom: 150px
-    display: flex
-    align-content: center
-    align-items: center
-    flex-wrap: wrap
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    gap: 20px
+    margin-top: 40px
 
     .coisas
-        width: 30%
-        margin: auto
-        margin-top: 30px
-        margin-bottom: 10px
-        max-width: 600px
-        min-width: 300px
-        padding: 40px
-        min-height: 350px
-        height: auto
-        border-radius: 10px
-        border: 1px solid #E6ECF8
-        //box-shadow: #E6ECF8 0px 2px 8px 0px
+        display: flex
+        flex-direction: column
+        padding: 20px
+        border-radius: 20px
         user-select: none
-        background-color: #fafafa 
+        background-color: var(--bg)
+
 
         &:hover
-            box-shadow: #E6ECF8 0px 2px 8px 0px
+            box-shadow: var(--bg) 0px 2px 8px 0px
+            border: 0.5px solid #2078fd
+
             
+    
+        .coisas-icone-texto
+            display: flex
+            align-items: center
+            gap: 15px
+            
+
         .icone
-            display: inline-flex
-            padding: 5px
+            display: flex
+            justify-items: center
+            padding: 10px
             border-radius: 5px
-            margin-bottom: 10px
+            justify-content: center
+            align-items: center
+            
             svg
                 font-size: 1.5em
 
-        .textos
-            width: 100%
-            .titulo
-                font-size: 1.1em
-                color: #484E53
-                font-weight: 600
+        .titulo-coisas
+            display: inline-flex
+            bottom: 0
+            font-weight: 600
+            font-size: 1.1em
+            color: var(--text)
+            margin-top: 15px
 
-            .descricao
-                font-size: 1em
-                margin-top: 10px
-                line-height: 2
-                color: #484E53
-                text-align: justify
+   
 
-    #desenvolvimento-web
-        .icone
-            background-color: #1362CA
-            color: #FFFFFF
-
-    #ui
-        .icone
-            background-color: #C92E2E
-            color: #FFFFFF
-
-    #mobile
-        .icone
-            background-color: #01A93A
-            color: #FFFFFF
-
-    #integracao
-        .icone
-            background-color: #FCD803
-            color: #FFFFFF
-
-    #data
-        .icone
-            background-color: #800080
-            color: #FFFFFF
-
-    #consultoria
-        .icone
-            background-color: #895129
-            color: #FFFFFF
-
+    
     
 
 
