@@ -12,7 +12,7 @@ import Integracao from "../img/projetos/logo/integracao.png"
 import ConectaAnapolis from "../img/projetos/logo/conectaanapolis.png"
 import AquiTem from "../img/projetos/logo/aquitem.png"
 import Zap24 from "../img/projetos/logo/zap24h.png"
-
+import { FaChevronRight } from "react-icons/fa6";
 
 const projects = [
   
@@ -84,27 +84,28 @@ const ProjectsContainer = () =>{
                         
                        
                 
-                        <div className="card-info">
+                      <div className="card-info">
+                          <div className="tag-type"><span>{project.type}</span></div>
 
-                            <div className="area-titulo">
-                                {project.img ?
-                                    <img src={project.img} className="img-projeto" alt={project.name}/>
-                                    :
-                                    <p className="title-card">{project.name}</p>
-                                    }
-                            </div>
-                                
+                          <div className="area-titulo">
+                              {project.img ?
+                                  <img src={project.img} className="img-projeto" alt={project.name}/>
+                                  :
+                                  <p className="title-card">{project.name}</p>
+                                  }
+                          </div>
+                              
 
-                            <div className="text-card">  
-                                <p className="desc-card">{project.desc}</p>
-                                
-                                {/*<p className="desc-card">{project.desc}</p> */}
-                            </div>   
-                        </div>
+                          <div className="text-card">  
+                              <p className="desc-card">{project.desc}</p>
+                              
+                              {/*<p className="desc-card">{project.desc}</p> */}
+                          </div>   
+                      </div>
 
-                        <Link to={`/project/${project.id}`} className="btnMaisDetalhes">
-                            <img src={Arrow} /> <span>detalhes</span>
-                        </Link>
+                      <Link to={`/project/${project.id}`} className="btnMaisDetalhes">
+                        <span>Ver detalhes</span> <FaChevronRight size={12}/>
+                      </Link>
 
                 
                     </div>

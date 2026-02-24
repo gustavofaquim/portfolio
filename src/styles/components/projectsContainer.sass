@@ -6,7 +6,7 @@
     flex-wrap: wrap
     width: 100%
     margin: auto
-    background: #ffffff
+    background-color: var(--bg)
 
     a
         text-decoration: none
@@ -25,7 +25,7 @@
             width: 90%
 
     .projects-container-title
-        color: variables.$highlighted-text-color
+        color: var(--text)
         margin: auto  
         display: inline
         width: 70%
@@ -47,8 +47,7 @@
             font-size: 1.4em
             margin-top: 20px
             font-weight: 300
-            color: #4e4d4d
-
+            color: var(--text)
 
 
     .projects-grid
@@ -69,7 +68,7 @@
             max-width: 900px
             padding: 60px 35px
             margin-bottom: 2rem
-            box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8          
+            box-shadow: 0 0 0 3px var(--bgSecondary)   
             text-align: center
             align-items: center 
             justify-content: center 
@@ -81,7 +80,22 @@
             @media (max-width: 440px)
                 display: inline
                 width: 85%
+            
+            .tag-type
+                display: flex
+                justify-content: center
+                justify-items: center
+                
+                span
+                    font-weight: 600
+                    font-size: 12px
+                    border: 1px solid #0064fa
+                    padding: 5px 15px
+                    border-radius: 20px
+                    background-color: #3485fd11
+                    color: #0066ff
 
+                
             
             .btnMaisDetalhes
                 width: 180px
@@ -89,22 +103,22 @@
                 margin: auto
                 font-size: 1em
                 margin-top: 25px
-                background-color: #ebf5ff
-                color: #0068d1
-                font-weight: 450
+                color: var(--text)
+                font-weight: 600
                 border-radius: 5px
                 display: flex
                 flex-direction: row
                 align-items: center
                 justify-content: center
+                gap: 10px
                 
                 span
                     margin-left: 5px
 
                 &:hover
                     text-decoration: none
-                    background-color: #ebf5ff
-                    color: #0068d1      
+                    color: #1178df 
+                    background: none     
 
 
             .area-titulo
@@ -114,14 +128,15 @@
                 height: 60px
                 align-content: center
                 overflow: hidden
+                margin-top: 25px
 
                 .img-projeto
                     width: 140px
            
                 .title-card
-                    font-size: 1.1em
-                    color: #0C1225
-                    font-weight: 600
+                    font-size: 1.5em
+                    color: var(--text)
+                    font-weight: 700
 
             .text-card 
                 width: 100%
@@ -131,8 +146,8 @@
                 .desc-card
                     margin-top: 20px
                     font-size: 1em
-                    color: #141c3abe
-                    font-weight: 600
+                    color: var(--textSecondary)
+                    font-weight: 400
 
                 .title-type
                     font-size: 0.9em
@@ -184,6 +199,9 @@
             a:hover
                 background: variables.$bg-color-hover
         
+                    
+        #gestorfinanceiro:hover
+            background-image: url('/src/img/projetos/financeiro.png')
        
 
 @media (max-width: 400px)
