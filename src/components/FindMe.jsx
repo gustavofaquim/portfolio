@@ -23,53 +23,62 @@ const FindMe = () => {
         <section className='find-me'>
             <div className='find-me-container'>
 
-                <div className='area-flutuante'>
-
-                    <p>Interessado em trabalharmos juntos? Podemos marcar um horário para conversar</p>
-                    
-                    <Link className='btn-conversar'>
-                        <imag src="../img/icones/icon2.png" />Vamos conversar
-                    </Link>
+                <div className="titulo">
+                    <p>Interessado em trabalharmos juntos?</p>
+                    <h3>Vamos conversar?</h3>
                 </div>
-                
                 
                 <div className='area-contato'>
                 
-                <div className='contato'>
+                    <div className='contato'>
 
-                  
+                        <div id='information'>
+                            <div className='info-card'>
+                                <AiFillPhone id='phone-icon' />  <p>(62) 996828796</p>
+                            </div>
+
+                            <div className='info-card'>
+                                <AiFillMail /> <p>gustavofaquim408@gmail.com</p>
+                            </div>
+
+                            <div className='info-card'>
+                                <AiFillEnvironment id='pin-icon' /> <p>Anápolis/GO</p>
+                            </div>
+
+
+                            <div className='social'>
+                                <div id='social-networks'>
+                                    {socialNetworks.map((network) => (
+                                        <a href={network.link} target="_blank" className='social-btn' id={network.name} key={network.name}>{network.icon}</a>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div className='areaformContato'>
                         
-                    <div id='information'>
-                        <div className='info-card'>
-                            <AiFillPhone id='phone-icon' />  <p>(62) 996828796</p>
+                        <div className='formContato'>
+                            <div>
+                                <label htmlFor="name">Seu nome</label>
+                                <input type="text" id='name' />
+                            </div>
+
+
+                            <div>
+                                <label htmlFor="texto">Mensagem</label>
+                                <textarea type="text" id='texto' />
+                            </div>
+
+                            <button>Enviar mensagem pelo WhatsApp</button>
                         </div>
-
-                        <div className='info-card'>
-                            <AiFillMail /> <p>gustavofaquim408@gmail.com</p>
-                        </div>
-
-
-                        <div className='info-card'>
-                            <AiFillEnvironment id='pin-icon' /> <p>Anápolis/GO</p>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div className='social'>
-                    
-                    
-
-                    <div id='social-networks'>
-
-                        {socialNetworks.map((network) => (
-                            <a href={network.link} target="_blank" className='social-btn' id={network.name} key={network.name}>{network.icon}</a>
-                        ))}
-
                     </div>
 
-                </div>
+
+                    
 
                 </div>
                 

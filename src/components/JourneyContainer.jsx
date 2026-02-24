@@ -9,10 +9,7 @@ const JourneyContainer = () => {
   return (
     <section id='jornada' className='journey'>
 
-      <div className="fundoAzul">
-
-      </div>
-
+    
       <div className="area-total">
 
         <div className="titulo-sub">
@@ -24,11 +21,11 @@ const JourneyContainer = () => {
 
         <div className="educacao">
 
-          <h3 className="titulo-area"><FaUserGraduate className="icone" /> Formação Acadêmica</h3>
+          <h3 className="titulo-area">👨‍🎓 Formação Acadêmica</h3>
 
           <div className="formacao" id='pos'>
               <p className="titulo">Pós-graduação em Desenvolvimento Web Full Stack</p> <br />
-              <a className="link" href="https://descomplica.com.br/faculdade/a/" target="_blak">Faculdade Descomplica</a>
+              <a className="link" href="https://uniamerica.br/" target="_blak">Centro Universitário Uniamérica</a>
               <p className="descricao">A especialização me proporcionou domínio prático das principais tecnologias do desenvolvimento web moderno, tanto no front-end quanto no back-end. Aprofundei conhecimentos em frameworks, arquitetura de aplicações e boas práticas, consolidando minha atuação como desenvolvedor full stack.</p>
           </div>
 
@@ -41,7 +38,7 @@ const JourneyContainer = () => {
         </div>
 
         <div className="trabalho">
-          <h3 className="titulo-area" id='titulo-experiencias'><BsPersonWorkspace className="icone" /> Experiências Profissionais</h3>
+          <h3 className="titulo-area" id='titulo-experiencias'>👨‍💻 Experiências Profissionais</h3>
 
           <div className="emprego">
               <p className="titulo">Supervisor Técnico</p> <br />
@@ -51,7 +48,8 @@ const JourneyContainer = () => {
           </div>
 
           <div className="emprego">
-              <p className="titulo">Empreendedorismo e Consultoria</p> <br />
+              <p className="titulo">Proprietário</p> <br />
+               <a target="_blak">Contrabarra</a>
               <div className="calendario"><FaCalendar/> <p>2023 - atualmente</p></div>
               <p className="descricao">Além da atuação profissional, sou proprietário de uma empresa de consultoria e desenvolvimento, onde realizo projetos sob demanda para clientes, criando soluções personalizadas em tecnologia.</p>
           </div>        

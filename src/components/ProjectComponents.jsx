@@ -32,7 +32,9 @@ return (
       <div className="linha">
         <div className="topo">
           <div className="topo-textos">
-            <span className={project.tagId}>{project.tag}</span>
+           <div className='tag-type'>
+             <span className={project.tagId}>{project.tag}</span>
+           </div>
             <h1>{project.title}</h1>
             <p>{project.intro}</p>
           </div>
@@ -106,9 +108,8 @@ const projects = {
 
   mandatotec: {
     title: 'Mandatotec',
-    intro:
-      'O mandatotec é uma plataforma inovadora desenvolvida para modernizar e otimizar a gestão de mandatos políticos. Ele busca oferecer ferramentas que facilitem a comunicação e a eficiência no dia a dia dos gabinetes parlamentares.',
-    tag: 'Web',
+    intro:'O mandatotec é uma plataforma inovadora desenvolvida para modernizar e otimizar a gestão de mandatos políticos. Ele busca oferecer ferramentas que facilitem a comunicação e a eficiência no dia a dia dos gabinetes parlamentares.',
+    tag: 'Sistema Web',
     tagId: 'web',
     imagemCapa: Mandatotectop,
     topoImageId: 'mandatotec-imagem-topo',
@@ -156,9 +157,8 @@ const projects = {
 
   aquitem: {
   title: 'Aqui Tem',
-  intro:
-    'O Aqui Tem é uma plataforma desenvolvida para conectar cidadãos a serviços, comércios e pontos importantes da cidade, oferecendo praticidade e rapidez na busca por informações essenciais.',
-  tag: 'App',
+  intro:'O Aqui Tem é uma plataforma desenvolvida para conectar cidadãos a serviços, comércios e pontos importantes da cidade, oferecendo praticidade e rapidez na busca por informações essenciais.',
+  tag: 'App Mobile',
   tagId: 'app',
   imagemCapa: AquitemHome,
   topoImageId: 'aquitem-imagem-topo',
@@ -203,7 +203,7 @@ zap24h: {
   title: 'Zap 24h – Prefeitura de Anápolis',
   intro:
     'O Zap 24h é o canal oficial de atendimento via WhatsApp da Prefeitura de Anápolis, criado para oferecer ao cidadão uma forma rápida, moderna e acessível de solicitar serviços, registrar demandas e obter informações. Integrado a diversos sistemas internos, o canal funciona 24 horas por dia, automatizando atendimentos, reduzindo filas e tornando a comunicação mais eficiente.',
-  tag: 'Sistema',
+  tag: 'Automação de WhatsApp',
   tagId: 'system',
   imagemCapa: ZapCapa, 
   topoImageId: 'zap24h-imagem-topo',
@@ -251,7 +251,7 @@ conecta: {
     title: 'Conecta Anápolis',
     intro:
       'O Conecta Anápolis é um aplicativo inovador desenvolvido para reunir em um único lugar diversos serviços da Prefeitura de Anápolis. Criado para facilitar o acesso da população, o app integra funcionalidades essenciais do dia a dia, modernizando a relação entre o cidadão e a administração pública.',
-    tag: 'App',
+    tag: 'App Mobile',
     tagId: 'app',
     imagemCapa: ConectaTop,
     topoImageId: 'conecta-imagem-topo',
@@ -298,7 +298,7 @@ conecta: {
     title: 'Integração Ábaris ↔ Lyceum',
     intro:
       'Criamos uma ponte eficiente entre Ábaris e Lyceum para automatizar a importação de documentos e reduzir trabalho manual.',
-    tag: 'Web',
+    tag: 'Sistema Web',
     //imagemCapa: TopoImagemIntegracao,
     tagId: 'web',
     sections: [
@@ -335,6 +335,9 @@ conecta: {
     title: 'Sistema de Controle Financeiro',
     intro:
       'Sistema para gerenciar emissão de notas fiscais e acompanhamento de pagamentos por projeto, com painel em Power BI.',
+    tag: 'Sistema Web',
+    //imagemCapa: TopoImagemIntegracao,
+    tagId: 'web',
     imagemCapa: ImagemTopoFinanceiro,
     sections: [
       {

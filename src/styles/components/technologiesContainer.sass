@@ -2,7 +2,6 @@
 @use '../mixins'
     
 .technologies-container
-    border-top: 0.5px solid #c2c0c067
     display: flex
     flex-wrap: wrap
     width: 100%
@@ -34,10 +33,12 @@
         h3
             font-size: 2rem
             
-
         p
-            text-align: center
-            color: #4e4d4d
+            font-size: 1.3em
+            margin-top: 10px
+            font-weight: 300
+            color: #036cf5
+
             
 
     .sobre
@@ -65,6 +66,32 @@
             width: 80%
 
     
+        .filter-buttons
+            width: 60%
+            min-width: 300px
+            max-width: 900px
+            margin: auto
+            display: flex
+            justify-content: space-between
+            gap: 15px
+            margin-bottom: 40px
+
+            button
+                padding: .6rem 1.2rem
+                border: none
+                border-radius: 20px
+                cursor: pointer
+                transition: .3s
+                background-color: var(--bg)
+                color: var(--text)
+            
+            .active
+                background-color: #1362CA
+                color: #FFFFFF
+
+
+
+    
 
     .technologies-grid
         display: flex
@@ -77,7 +104,7 @@
             @include mixins.center
             padding: 1rem 1rem
             font-size: 0.8rem
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+            box-shadow: var(--bg) 0px 2px 8px 0px
             border-radius: 5px
             font-weight: 600
             color: var(--text)
@@ -86,6 +113,7 @@
             width: 10%
             max-width: 400px
             min-width: 150px
+            border-radius: 20px
 
             &:hover
                 box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2)
@@ -96,7 +124,7 @@
 
             .card-icone
                 width: 100%
-                padding: 20px
+                padding: 15px
 
                 img
                     width: 80%

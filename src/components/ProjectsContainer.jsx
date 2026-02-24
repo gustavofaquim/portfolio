@@ -82,24 +82,22 @@ const ProjectsContainer = () =>{
 
                     <div className="project-card" id={project.id} key={project.id} >
                         
-                       
-                
                       <div className="card-info">
                           <div className="tag-type"><span>{project.type}</span></div>
 
                           <div className="area-titulo">
+                            <div className="area-titulo-image">
                               {project.img ?
-                                  <img src={project.img} className="img-projeto" alt={project.name}/>
-                                  :
-                                  <p className="title-card">{project.name}</p>
-                                  }
+                                <img src={project.img} className="img-projeto" alt={project.name}/>
+                                :
+                                <p className="title-card">{project.name}</p>
+                              }
+                              </div>
                           </div>
                               
 
                           <div className="text-card">  
                               <p className="desc-card">{project.desc}</p>
-                              
-                              {/*<p className="desc-card">{project.desc}</p> */}
                           </div>   
                       </div>
 
