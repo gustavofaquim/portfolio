@@ -27,10 +27,26 @@ const FindMe = () => {
                     <p>Interessado em trabalharmos juntos?</p>
                     <h3>Vamos conversar?</h3>
                 </div>
+
+
+                
+                
+               
                 
                 <div className='area-contato'>
+
+                    
                 
                     <div className='contato'>
+
+                   <div className='area-btn-whatsapp'>
+                    <a href="https://wa.me/5562996828796" target="_blank" rel="noopener noreferrer">
+                        <div className='btn-whatsapp'>    
+                            <FaWhatsapp className="icone_whatsapp" />
+                            <p>WhatsApp</p>
+                        </div>
+                    </a>
+                   </div>
 
                         <div id='information'>
                             <div className='info-card'>
@@ -57,28 +73,6 @@ const FindMe = () => {
                         </div>
                     </div>
 
-
-
-                    <div className='areaformContato'>
-                        
-                        <div className='formContato'>
-                            <div>
-                                <label htmlFor="name">Seu nome</label>
-                                <input type="text" id='name' />
-                            </div>
-
-
-                            <div>
-                                <label htmlFor="texto">Mensagem</label>
-                                <textarea type="text" id='texto' />
-                            </div>
-
-                            <button>Enviar mensagem pelo WhatsApp</button>
-                        </div>
-                    </div>
-
-
-                    
 
                 </div>
                 

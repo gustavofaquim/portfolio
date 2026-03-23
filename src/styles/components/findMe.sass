@@ -4,7 +4,6 @@
 @use '../mixins'
 
 .find-me
-    border: 1px solid red
     display: flex
     flex-wrap: wrap
     margin: auto
@@ -39,7 +38,6 @@
         .area-contato
             display: flex
             width: 100%
-            border: 1px solid red
             margin-bottom: 100px
             flex-wrap: wrap
         
@@ -103,6 +101,7 @@
             justify-content: center 
             flex-wrap: wrap
             margin: auto
+            margin-top: 50px
            
             .info-card
                 display: flex
@@ -142,6 +141,37 @@
         font-size: 12pt !important
     
 
-    
+a
+    text-decoration: none
 
 
+.area-btn-whatsapp
+    display: flex
+    justify-content: center
+    margin-top: 20px
+
+.btn-whatsapp
+    background-color:  #25D366
+    width: 250px
+    display: inline-flex
+    flex-direction: row
+    justify-content: center
+    align-self: center
+    padding: 10px 0px 10px 0px
+    border-radius: 10px
+
+    &:hover
+        background-color: #089e3f
+
+    p
+        color: #FFFFFF
+        margin-top: 5px
+        margin-left: 10px
+
+
+.icone_whatsapp
+    font-size: 30px
+    cursor: pointer
+    color: #FFFFFF
+
+ 
